@@ -20,7 +20,7 @@ public class ChangePassword extends TestClassUtil {
 
 	@Test(priority = 1, dataProvider = "defaultDP")
 	public void changePassword() throws AutomationFrameworkException, IOException, InterruptedException {
-		CommonUtilities.AccessToHReckURL(true);
+		CommonUtilities.AccessToHReckURL(false);
 		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 		driver.findElement(KeyWordTool.getLocator("changePassword", "PreLogOutBotton")).click();
 		driver.findElement(KeyWordTool.getLocator("changePassword", "ChPassLink")).click();
