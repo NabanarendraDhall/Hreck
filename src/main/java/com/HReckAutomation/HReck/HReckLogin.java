@@ -48,7 +48,8 @@ public class HReckLogin extends TestClassUtil {
 			Thread.sleep(5000);
 			String afterLoginPageURL = driver.getCurrentUrl();
 			System.out.println(afterLoginPageURL);
-			if (loginPageURL.equals(afterLoginPageURL)) {
+			if (loginPageURL.equals(afterLoginPageURL)) 
+			{
 				System.out.println("eNTERED iF");
 				Set handles = driver.getWindowHandles();
 				for (String handle1 : driver.getWindowHandles()) {
@@ -60,16 +61,19 @@ public class HReckLogin extends TestClassUtil {
 					Assert.assertEquals(ErrorMessage, z, "Test case failed");
 					driver.navigate().refresh();
 				}
-			} else {
+			} else 
+			
+			{
 				System.out.println("eNTERED ELSE");
 				String dashBoardPgeURL = driver.getCurrentUrl();
 				System.out.println("After Login URL are : "+dashBoardPgeURL);
 				Assert.assertEquals(dashBoardPgeURL, z, "Test case passed");
 			}
 
-		} catch (Exception e) {
+		} catch (Exception e) 
+		{
 			e.printStackTrace();
-		}
+		};
 	}
 	
 	@Test(priority = 2, dataProvider = "defaultDP")
