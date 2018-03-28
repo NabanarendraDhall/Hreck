@@ -3,18 +3,16 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test verbose="2" name="Default test">
     <classes>
-      <class name="com.HReckAutomation.HReck.HReckLogin"/>
+      <class name="com.HReckAutomation.HReck.ChangePassword"/>
     </classes>
   </test> <!-- Default test -->
   <test name="Default test(failed)">
     <classes>
-      <class name="com.HReckAutomation.HReck.HReckLogin">
+      <class name="com.HReckAutomation.HReck.ChangePassword">
         <methods>
-          <include name="tearBrowser"/>
-          <include name="openBrowser"/>
-          <include name="hReckLogin"/>
+          <include name="changePassword"/>
         </methods>
-      </class> <!-- com.HReckAutomation.HReck.HReckLogin -->
+      </class> <!-- com.HReckAutomation.HReck.ChangePassword -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -7,6 +7,9 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterSuite;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
 
 import com.HReckAutomation.CommonUtils.CommonUtilities;
@@ -19,7 +22,7 @@ public class HReckLogin extends TestClassUtil {
 	WebDriver driver;
 	String actual, expected;
 	
-	@Test(priority = 0, dataProvider = "defaultDP")
+	@BeforeClass()
 	public void openBrowser() throws InterruptedException, AutomationFrameworkException, IOException {
 		CommonUtilities.setvaluefromconfig();
 		driver = new DefaultDriverManager().getDriver();
@@ -29,7 +32,7 @@ public class HReckLogin extends TestClassUtil {
 		Thread.sleep(1000);
 	}
 	
-	@Test(priority = 1, dataProvider = "defaultDP")
+	@Test(priority = 0, dataProvider = "defaultDP")
 	public void hReckLogin(String x, String y, String z) throws InterruptedException, AutomationFrameworkException {
 		try {
 			driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
@@ -42,18 +45,18 @@ public class HReckLogin extends TestClassUtil {
 			driver.findElement(KeyWordTool.getLocator("hReckLogin", "password")).click();
 			driver.findElement(KeyWordTool.getLocator("hReckLogin", "password")).clear();
 			driver.findElement(KeyWordTool.getLocator("hReckLogin", "password")).sendKeys(y);
-			Thread.sleep(5000);
+			Thread.sleep(2000);
 			String handle = driver.getWindowHandle();
 			driver.findElement(KeyWordTool.getLocator("hReckLogin", "LogInButton")).click();
-			Thread.sleep(5000);
+			Thread.sleep(2000);
 			String afterLoginPageURL = driver.getCurrentUrl();
 			System.out.println(afterLoginPageURL);
 			if (loginPageURL.equals(afterLoginPageURL)) {
-				System.out.println("eNTERED iF");
+				System.out.println("Entered If");
 				Set handles = driver.getWindowHandles();
 				for (String handle1 : driver.getWindowHandles()) {
 					driver.switchTo().window(handle1);
-					Thread.sleep(5000);
+					Thread.sleep(2000);
 					String ErrorMessage = driver.findElement(KeyWordTool.getLocator("hReckLogin", "popUpErrorMessage"))
 							.getText();
 					driver.findElement(KeyWordTool.getLocator("hReckLogin", "PopUpOkButton"));
@@ -61,7 +64,7 @@ public class HReckLogin extends TestClassUtil {
 					driver.navigate().refresh();
 				}
 			} else {
-				System.out.println("eNTERED ELSE");
+				System.out.println("Entered Else");
 				String dashBoardPgeURL = driver.getCurrentUrl();
 				System.out.println("After Login URL are : "+dashBoardPgeURL);
 				Assert.assertEquals(dashBoardPgeURL, z, "Test case passed");
@@ -72,15 +75,19 @@ public class HReckLogin extends TestClassUtil {
 		}
 	}
 	
-	@Test(priority = 2, dataProvider = "defaultDP")
-	public void hReckLogout() throws AutomationFrameworkException {
-		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+	@Test(dependsOnMethods="hReckLogin", dataProvider = "defaultDP")
+	public void hReckLogout() throws AutomationFrameworkException, InterruptedException {
+		Thread.sleep(2000);
+		String dashBoardPageURL = driver.getCurrentUrl();
 		driver.findElement(KeyWordTool.getLocator("hReckLogout", "PreLogOutBotton")).click();
 		driver.findElement(KeyWordTool.getLocator("hReckLogout", "logOutButton")).click();
+		Thread.sleep(2000);
+		Assert.assertNotEquals(dashBoardPageURL, driver.getCurrentUrl());
+		System.out.println();
 	}
 
 	@AfterClass()
 	public void tearBrowser() {
-//		driver.close();
+		driver.close();
 	}
 }
