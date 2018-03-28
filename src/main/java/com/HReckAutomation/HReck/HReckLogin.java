@@ -1,5 +1,8 @@
 package com.HReckAutomation.HReck;
-
+/*
+ * 
+ * Author : Nabanarendra Dhall
+ */
 import java.io.IOException;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
@@ -21,7 +24,9 @@ import com.mentorstudies.automationframework.util.impl.DefaultDriverManager;
 public class HReckLogin extends TestClassUtil {
 	WebDriver driver;
 	String actual, expected;
-	
+	/*
+	 * openBrowser will open the configured URL as per config.properties
+	 */
 	@BeforeClass()
 	public void openBrowser() throws InterruptedException, AutomationFrameworkException, IOException {
 		CommonUtilities.setvaluefromconfig();
@@ -31,7 +36,10 @@ public class HReckLogin extends TestClassUtil {
 		driver.manage().window().maximize();
 		Thread.sleep(1000);
 	}
-	
+	/*
+	 * This test case will check all the possible tests for login along with success case.
+	 * 
+	 */
 	@Test(priority = 0, dataProvider = "defaultDP")
 	public void hReckLogin(String x, String y, String z) throws InterruptedException, AutomationFrameworkException {
 		try {
@@ -74,7 +82,9 @@ public class HReckLogin extends TestClassUtil {
 			e.printStackTrace();
 		}
 	}
-	
+	/*
+	 * The test case will verify the steps to logout. The test case is totally depend on login method
+	 */
 	@Test(dependsOnMethods="hReckLogin", dataProvider = "defaultDP")
 	public void hReckLogout() throws AutomationFrameworkException, InterruptedException {
 		Thread.sleep(2000);

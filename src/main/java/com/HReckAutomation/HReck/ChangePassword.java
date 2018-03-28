@@ -9,6 +9,7 @@ package com.HReckAutomation.HReck;
  */
 import java.io.IOException;
 import java.util.Set;
+import java.util.concurrent.TimeUnit;
 
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
@@ -28,6 +29,7 @@ public class ChangePassword extends TestClassUtil {
 	 * which is given from Config.Proporties
 	 */
 
+
 	@BeforeClass
 	public void openBrowser() throws IOException, AutomationFrameworkException, InterruptedException {
 		CommonUtilities.AccessToHReckURL(true);
@@ -39,7 +41,15 @@ public class ChangePassword extends TestClassUtil {
 	 */
 	@AfterClass
 	public void quitBrowser() throws IOException, AutomationFrameworkException, InterruptedException {
+=======
+	@Test(priority = 1, dataProvider = "defaultDP")
+	public void changePassword() throws AutomationFrameworkException, IOException, InterruptedException {
 		CommonUtilities.AccessToHReckURL(false);
+		CommonUtilities.driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+		CommonUtilities.driver.findElement(KeyWordTool.getLocator("changePassword", "PreLogOutBotton")).click();
+		CommonUtilities.driver.findElement(KeyWordTool.getLocator("changePassword", "ChPassLink")).click();
+		Assert.assertEquals(CommonUtilities.driver.findElement(KeyWordTool.getLocator("changePassword", "ChPassButton")).isEnabled(), false); 
+
 	}
 
 	/*
