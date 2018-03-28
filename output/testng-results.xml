@@ -1,139 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="9" passed="9">
+<testng-results skipped="0" failed="0" total="4" passed="4">
   <reporter-output>
   </reporter-output>
-  <suite name="MyDefault Test Suite" duration-ms="115370" started-at="2018-03-28T07:22:23Z" finished-at="2018-03-28T07:24:18Z">
+  <suite name="MyDefault Test Suite" duration-ms="48123" started-at="2018-03-28T11:50:31Z" finished-at="2018-03-28T11:51:19Z">
     <groups>
     </groups>
-    <test name="Command line test 299f77a1-e231-4b48-bda2-2a9d236dd06e" duration-ms="115370" started-at="2018-03-28T07:22:23Z" finished-at="2018-03-28T07:24:18Z">
-      <class name="com.HReckAutomation.HReck.ChangePassword">
-        <test-method status="PASS" signature="openBrowser()[pri:0, instance:com.HReckAutomation.HReck.ChangePassword@4d1ea053]" name="openBrowser" is-config="true" duration-ms="12891" started-at="2018-03-28T12:52:23Z" finished-at="2018-03-28T12:52:36Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- openBrowser -->
-        <test-method status="PASS" signature="buttonChk()[pri:0, instance:com.HReckAutomation.HReck.ChangePassword@4d1ea053]" name="buttonChk" duration-ms="4307" started-at="2018-03-28T12:52:36Z" data-provider="defaultDP" finished-at="2018-03-28T12:52:40Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- buttonChk -->
-        <test-method status="PASS" signature="chPassMain1(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:1, instance:com.HReckAutomation.HReck.ChangePassword@4d1ea053]" name="chPassMain1" duration-ms="3637" started-at="2018-03-28T12:52:40Z" data-provider="defaultDP" finished-at="2018-03-28T12:52:44Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[dasd]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[fsdf]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[fgfg]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[Password must meet following requirement:
-* At least 8 characters
-* Max 15 characters
-* At least 1 capital letter
-* At least 1 special character]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- chPassMain1 -->
-        <test-method status="PASS" signature="chPassMain2(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:2, instance:com.HReckAutomation.HReck.ChangePassword@4d1ea053]" name="chPassMain2" duration-ms="3564" started-at="2018-03-28T12:52:44Z" data-provider="defaultDP" finished-at="2018-03-28T12:52:47Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[dadad]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[Asdf@1234]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[Asdf@123]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[Entered password doesn’t match with New password.]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- chPassMain2 -->
-        <test-method status="PASS" signature="chPassMain(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:3, instance:com.HReckAutomation.HReck.ChangePassword@4d1ea053]" name="chPassMain" duration-ms="8813" started-at="2018-03-28T12:52:47Z" data-provider="defaultDP" finished-at="2018-03-28T12:52:56Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Asdf@123]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[Asdf@1234]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[Asdf@1234]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[Enter valid Current password]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- chPassMain -->
-        <test-method status="PASS" signature="chPassMain(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:3, instance:com.HReckAutomation.HReck.ChangePassword@4d1ea053]" name="chPassMain" duration-ms="8789" started-at="2018-03-28T12:52:56Z" data-provider="defaultDP" finished-at="2018-03-28T12:53:05Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Asdf@1234]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[Asdf@1234]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[Asdf@1234]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[Password Changed successfully]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- chPassMain -->
-        <test-method status="PASS" signature="quitBrowser()[pri:0, instance:com.HReckAutomation.HReck.ChangePassword@4d1ea053]" name="quitBrowser" is-config="true" duration-ms="1059" started-at="2018-03-28T12:53:05Z" finished-at="2018-03-28T12:53:06Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- quitBrowser -->
-      </class> <!-- com.HReckAutomation.HReck.ChangePassword -->
+    <test name="Command line test 8518d949-5fcf-437f-a67c-3cd4392c6bad" duration-ms="48123" started-at="2018-03-28T11:50:31Z" finished-at="2018-03-28T11:51:19Z">
       <class name="com.HReckAutomation.HReck.HReckLogin">
-        <test-method status="PASS" signature="openBrowser()[pri:0, instance:com.HReckAutomation.HReck.HReckLogin@7b83c2b2]" name="openBrowser" is-config="true" duration-ms="8256" started-at="2018-03-28T12:53:06Z" finished-at="2018-03-28T12:53:14Z">
+        <test-method status="PASS" signature="openBrowser()[pri:0, instance:com.HReckAutomation.HReck.HReckLogin@2071aba1]" name="openBrowser" is-config="true" duration-ms="8225" started-at="2018-03-28T17:20:31Z" finished-at="2018-03-28T17:20:39Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openBrowser -->
-        <test-method status="PASS" signature="hReckLogin(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.HReckAutomation.HReck.HReckLogin@7b83c2b2]" name="hReckLogin" duration-ms="22591" started-at="2018-03-28T12:53:14Z" data-provider="defaultDP" finished-at="2018-03-28T12:53:37Z">
+        <test-method status="PASS" signature="hReckLogin(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.HReckAutomation.HReck.HReckLogin@2071aba1]" name="hReckLogin" duration-ms="13526" started-at="2018-03-28T17:20:39Z" data-provider="defaultDP" finished-at="2018-03-28T17:20:53Z">
           <params>
             <param index="0">
               <value>
@@ -154,7 +32,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- hReckLogin -->
-        <test-method status="PASS" signature="hReckLogin(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.HReckAutomation.HReck.HReckLogin@7b83c2b2]" name="hReckLogin" duration-ms="22526" started-at="2018-03-28T12:53:37Z" data-provider="defaultDP" finished-at="2018-03-28T12:53:59Z">
+        <test-method status="PASS" signature="hReckLogin(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.HReckAutomation.HReck.HReckLogin@2071aba1]" name="hReckLogin" duration-ms="13489" started-at="2018-03-28T17:20:53Z" data-provider="defaultDP" finished-at="2018-03-28T17:21:06Z">
           <params>
             <param index="0">
               <value>
@@ -175,16 +53,16 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- hReckLogin -->
-        <test-method status="PASS" signature="hReckLogin(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.HReckAutomation.HReck.HReckLogin@7b83c2b2]" name="hReckLogin" duration-ms="12574" started-at="2018-03-28T12:53:59Z" data-provider="defaultDP" finished-at="2018-03-28T12:54:12Z">
+        <test-method status="PASS" signature="hReckLogin(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.HReckAutomation.HReck.HReckLogin@2071aba1]" name="hReckLogin" duration-ms="6552" started-at="2018-03-28T17:21:06Z" data-provider="defaultDP" finished-at="2018-03-28T17:21:13Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[Jagdish]]>
+                <![CDATA[narendra]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[Tes@1234]]>
+                <![CDATA[Asdf@1234]]>
               </value>
             </param>
             <param index="2">
@@ -196,15 +74,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- hReckLogin -->
-        <test-method status="PASS" signature="hReckLogout()[pri:0, instance:com.HReckAutomation.HReck.HReckLogin@7b83c2b2]" name="hReckLogout" duration-ms="4274" started-at="2018-03-28T12:54:12Z" data-provider="defaultDP" depends-on-methods="com.HReckAutomation.HReck.HReckLogin.hReckLogin" finished-at="2018-03-28T12:54:16Z">
+        <test-method status="PASS" signature="hReckLogout()[pri:0, instance:com.HReckAutomation.HReck.HReckLogin@2071aba1]" name="hReckLogout" duration-ms="4229" started-at="2018-03-28T17:21:13Z" data-provider="defaultDP" depends-on-methods="com.HReckAutomation.HReck.HReckLogin.hReckLogin" finished-at="2018-03-28T17:21:17Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- hReckLogout -->
-        <test-method status="PASS" signature="tearBrowser()[pri:0, instance:com.HReckAutomation.HReck.HReckLogin@7b83c2b2]" name="tearBrowser" is-config="true" duration-ms="2059" started-at="2018-03-28T12:54:16Z" finished-at="2018-03-28T12:54:18Z">
+        <test-method status="PASS" signature="tearBrowser()[pri:0, instance:com.HReckAutomation.HReck.HReckLogin@2071aba1]" name="tearBrowser" is-config="true" duration-ms="2077" started-at="2018-03-28T17:21:17Z" finished-at="2018-03-28T17:21:19Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearBrowser -->
       </class> <!-- com.HReckAutomation.HReck.HReckLogin -->
-    </test> <!-- Command line test 299f77a1-e231-4b48-bda2-2a9d236dd06e -->
+    </test> <!-- Command line test 8518d949-5fcf-437f-a67c-3cd4392c6bad -->
   </suite> <!-- MyDefault Test Suite -->
 </testng-results>
