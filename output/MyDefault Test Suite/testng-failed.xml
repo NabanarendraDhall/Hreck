@@ -1,22 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [MyDefault Test Suite]">
-  <test name="Command line test 2febb447-e91b-4720-aa47-7d149d1ef79a">
+  <test name="Command line test 6b67cb8c-3eeb-41d7-b0e9-bcea8e81a06c">
     <classes>
       <class name="com.HReckAutomation.HReck.ChangePassword">
         <methods>
           <include name="changePassword"/>
         </methods>
       </class> <!-- com.HReckAutomation.HReck.ChangePassword -->
-    </classes>
-  </test> <!-- Command line test 2febb447-e91b-4720-aa47-7d149d1ef79a -->
-  <test name="Command line test 2febb447-e91b-4720-aa47-7d149d1ef79a(failed)">
-    <classes>
-      <class name="com.HReckAutomation.HReck.ChangePassword">
+      <class name="com.HReckAutomation.HReck.forgotPassword">
         <methods>
           <include name="changePassword"/>
         </methods>
-      </class> <!-- com.HReckAutomation.HReck.ChangePassword -->
+      </class> <!-- com.HReckAutomation.HReck.forgotPassword -->
     </classes>
-  </test> <!-- Command line test 2febb447-e91b-4720-aa47-7d149d1ef79a(failed) -->
+  </test> <!-- Command line test 6b67cb8c-3eeb-41d7-b0e9-bcea8e81a06c -->
+  <test name="Command line test 6b67cb8c-3eeb-41d7-b0e9-bcea8e81a06c(failed)">
+    <classes>
+      <class name="com.HReckAutomation.HReck.ChangePassword">
+        <methods>
+          <include name="quitBrowser"/>
+          <include name="changePassword"/>
+          <include name="openBrowser"/>
+        </methods>
+      </class> <!-- com.HReckAutomation.HReck.ChangePassword -->
+      <class name="com.HReckAutomation.HReck.forgotPassword">
+        <methods>
+          <include name="changePassword"/>
+        </methods>
+      </class> <!-- com.HReckAutomation.HReck.forgotPassword -->
+    </classes>
+  </test> <!-- Command line test 6b67cb8c-3eeb-41d7-b0e9-bcea8e81a06c(failed) -->
 </suite> <!-- Failed suite [MyDefault Test Suite] -->

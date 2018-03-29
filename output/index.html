@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+      <span class="top-banner-font-1">1 suite, 2 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -54,7 +54,7 @@
                 </li>
                 <li>
                   <a href="#" class="navigator-link " panel-name="testlist-MyDefault_Test_Suite">
-                    <span class="test-stats">1 test</span>
+                    <span class="test-stats">2 tests</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -91,7 +91,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method, 1 failed,   </span>
+                    <span class="method-stats">2 methods, 2 failed,   </span>
                   </li>
                   <li>
                     <span class="method-list-title failed">Failed methods</span>
@@ -100,6 +100,11 @@
                       <a href="#" panel-name="suite-MyDefault_Test_Suite" class="show-methods failed suite-MyDefault_Test_Suite"> (show)</a> <!-- show-methods failed suite-MyDefault_Test_Suite -->
                     </span>
                     <div class="method-list-content failed suite-MyDefault_Test_Suite">
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-MyDefault_Test_Suite" title="com.HReckAutomation.HReck.forgotPassword" hash-for-method="changePassword">changePassword</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
                       <span>
                         <img width="3%" src="failed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-MyDefault_Test_Suite" title="com.HReckAutomation.HReck.ChangePassword" hash-for-method="changePassword">changePassword</a> <!-- method navigator-link -->
@@ -128,8 +133,37 @@
                   <a name="changePassword">
                   </a> <!-- changePassword -->
                   <span class="method-name">changePassword</span>
+                  <div class="stack-trace">org.openqa.selenium.remote.SessionNotFoundException: Session ID is null. Using WebDriver after calling quit()?
+Build info: version: &apos;2.53.1&apos;, revision: &apos;a36b8b1cd5757287168e54b817830adce9b0158d&apos;, time: &apos;2016-06-30 19:26:09&apos;
+System info: host: &apos;MUMTEWD00052&apos;, ip: &apos;192.168.66.2&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_144&apos;
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:134)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:644)
+	at org.openqa.selenium.remote.RemoteWebDriver$RemoteWebDriverOptions$RemoteTimeouts.implicitlyWait(RemoteWebDriver.java:865)
+	at com.HReckAutomation.HReck.ChangePassword.changePassword(ChangePassword.java:49)
+	at com.mentorstudies.automationframework.TestRunner.main(TestRunner.java:117)
+	at org.codehaus.mojo.exec.ExecJavaMojo$1.run(ExecJavaMojo.java:294)
+	at java.lang.Thread.run(Thread.java:748)
+... Removed 25 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-MyDefault_Test_Suite-class-failed -->
+          <div class="suite-MyDefault_Test_Suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">com.HReckAutomation.HReck.forgotPassword</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="changePassword">
+                  </a> <!-- changePassword -->
+                  <span class="method-name">changePassword</span>
                   <div class="stack-trace">java.lang.NullPointerException
-	at com.HReckAutomation.HReck.ChangePassword.changePassword(ChangePassword.java:43)
+	at com.HReckAutomation.HReck.forgotPassword.changePassword(forgotPassword.java:24)
 	at com.mentorstudies.automationframework.TestRunner.main(TestRunner.java:117)
 	at org.codehaus.mojo.exec.ExecJavaMojo$1.run(ExecJavaMojo.java:294)
 	at java.lang.Thread.run(Thread.java:748)
@@ -148,15 +182,36 @@
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite name=&quot;MyDefault Test Suite&quot;&gt;
-  &lt;test name=&quot;Command line test 2febb447-e91b-4720-aa47-7d149d1ef79a&quot;&gt;
+  &lt;test name=&quot;Command line test 6b67cb8c-3eeb-41d7-b0e9-bcea8e81a06c&quot;&gt;
     &lt;classes&gt;
       &lt;class name=&quot;com.HReckAutomation.HReck.ChangePassword&quot;&gt;
         &lt;methods&gt;
           &lt;include name=&quot;changePassword&quot;/&gt;
         &lt;/methods&gt;
       &lt;/class&gt; &lt;!-- com.HReckAutomation.HReck.ChangePassword --&gt;
+      &lt;class name=&quot;com.HReckAutomation.HReck.forgotPassword&quot;&gt;
+        &lt;methods&gt;
+          &lt;include name=&quot;changePassword&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- com.HReckAutomation.HReck.forgotPassword --&gt;
     &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- Command line test 2febb447-e91b-4720-aa47-7d149d1ef79a --&gt;
+  &lt;/test&gt; &lt;!-- Command line test 6b67cb8c-3eeb-41d7-b0e9-bcea8e81a06c --&gt;
+  &lt;test name=&quot;Command line test 6b67cb8c-3eeb-41d7-b0e9-bcea8e81a06c(failed)&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;com.HReckAutomation.HReck.ChangePassword&quot;&gt;
+        &lt;methods&gt;
+          &lt;include name=&quot;quitBrowser&quot;/&gt;
+          &lt;include name=&quot;changePassword&quot;/&gt;
+          &lt;include name=&quot;openBrowser&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- com.HReckAutomation.HReck.ChangePassword --&gt;
+      &lt;class name=&quot;com.HReckAutomation.HReck.forgotPassword&quot;&gt;
+        &lt;methods&gt;
+          &lt;include name=&quot;changePassword&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- com.HReckAutomation.HReck.forgotPassword --&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Command line test 6b67cb8c-3eeb-41d7-b0e9-bcea8e81a06c(failed) --&gt;
 &lt;/suite&gt; &lt;!-- MyDefault Test Suite --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -168,7 +223,10 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Command line test 2febb447-e91b-4720-aa47-7d149d1ef79a (1 class)</span>
+                <span class="test-name">Command line test 6b67cb8c-3eeb-41d7-b0e9-bcea8e81a06c (2 classes)</span>
+              </li>
+              <li>
+                <span class="test-name">Command line test 6b67cb8c-3eeb-41d7-b0e9-bcea8e81a06c(failed) (2 classes)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -194,16 +252,20 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(1);
+data.addRows(2);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'changePassword')
 data.setCell(0, 2, 'com.HReckAutomation.HReck.ChangePassword')
-data.setCell(0, 3, 13028);
+data.setCell(0, 3, 1257);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'changePassword')
+data.setCell(1, 2, 'com.HReckAutomation.HReck.forgotPassword')
+data.setCell(1, 3, 0);
 window.suiteTableData['MyDefault_Test_Suite']= { tableData: data, tableDiv: 'times-div-MyDefault_Test_Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 13 seconds</span>
+              <span class="suite-total-time">Total running time: 1 seconds</span>
               <div id="times-div-MyDefault_Test_Suite">
               </div> <!-- times-div-MyDefault_Test_Suite -->
             </div> <!-- times-div -->
@@ -218,13 +280,19 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-MyDefault_Test_Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">1 ignored method</span>
+            <span class="header-content">4 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="ignored-class-div">
               <span class="ignored-class-name">com.HReckAutomation.HReck.ChangePassword</span>
               <div class="ignored-methods-div">
-                <span class="ignored-method-name">logInHReck</span>
+                <span class="ignored-method-name">chPassMain1</span>
+                <br/>
+                <span class="ignored-method-name">buttonChk</span>
+                <br/>
+                <span class="ignored-method-name">chPassMain2</span>
+                <br/>
+                <span class="ignored-method-name">chPassMain</span>
                 <br/>
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
@@ -237,11 +305,28 @@ return data;
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
               <div class="chronological-class-name">com.HReckAutomation.HReck.ChangePassword</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">openBrowser</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- configuration-class before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">changePassword</span>
-                <span class="method-start">0 ms</span>
+                <span class="method-start">13505 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">quitBrowser</span>
+                <span class="method-start">14762 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.HReckAutomation.HReck.forgotPassword</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">changePassword</span>
+                <span class="method-start">14762 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
