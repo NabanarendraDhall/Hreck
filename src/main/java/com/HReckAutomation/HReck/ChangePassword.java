@@ -41,7 +41,7 @@ public class ChangePassword extends TestClassUtil {
 	 */
 	@AfterClass
 	public void quitBrowser() throws IOException, AutomationFrameworkException, InterruptedException {
-	
+		CommonUtilities.AccessToHReckURL(false);
 	}
 	@Test(priority = 1, dataProvider = "defaultDP")
 	public void changePassword() throws AutomationFrameworkException, IOException, InterruptedException {
@@ -178,3 +178,4 @@ public class ChangePassword extends TestClassUtil {
 		}
 	}
 }
+

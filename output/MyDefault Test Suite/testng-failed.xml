@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [MyDefault Test Suite]">
@@ -32,3 +33,19 @@
     </classes>
   </test> <!-- Command line test 6b67cb8c-3eeb-41d7-b0e9-bcea8e81a06c(failed) -->
 </suite> <!-- Failed suite [MyDefault Test Suite] -->
+=======
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [MyDefault Test Suite]">
+  <test name="Command line test 8518d949-5fcf-437f-a67c-3cd4392c6bad">
+    <classes>
+      <class name="com.HReckAutomation.HReck.HReckLogin">
+        <methods>
+          <include name="hReckLogout"/>
+          <include name="hReckLogin"/>
+        </methods>
+      </class> <!-- com.HReckAutomation.HReck.HReckLogin -->
+    </classes>
+  </test> <!-- Command line test 8518d949-5fcf-437f-a67c-3cd4392c6bad -->
+</suite> <!-- Failed suite [MyDefault Test Suite] -->
+>>>>>>> ccdfc338355e0e4ac10b48d4f82b7d1d6abb98cd

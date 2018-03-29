@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?xml version="1.0" encoding="UTF-8"?>
 <testng-results skipped="0" failed="2" total="2" passed="0">
   <reporter-output>
@@ -112,3 +113,93 @@ Driver info: driver.version: RemoteWebDriver
     </test> <!-- Command line test 6b67cb8c-3eeb-41d7-b0e9-bcea8e81a06c -->
   </suite> <!-- MyDefault Test Suite -->
 </testng-results>
+=======
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="4" passed="4">
+  <reporter-output>
+  </reporter-output>
+  <suite name="MyDefault Test Suite" duration-ms="48123" started-at="2018-03-28T11:50:31Z" finished-at="2018-03-28T11:51:19Z">
+    <groups>
+    </groups>
+    <test name="Command line test 8518d949-5fcf-437f-a67c-3cd4392c6bad" duration-ms="48123" started-at="2018-03-28T11:50:31Z" finished-at="2018-03-28T11:51:19Z">
+      <class name="com.HReckAutomation.HReck.HReckLogin">
+        <test-method status="PASS" signature="openBrowser()[pri:0, instance:com.HReckAutomation.HReck.HReckLogin@2071aba1]" name="openBrowser" is-config="true" duration-ms="8225" started-at="2018-03-28T17:20:31Z" finished-at="2018-03-28T17:20:39Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openBrowser -->
+        <test-method status="PASS" signature="hReckLogin(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.HReckAutomation.HReck.HReckLogin@2071aba1]" name="hReckLogin" duration-ms="13526" started-at="2018-03-28T17:20:39Z" data-provider="defaultDP" finished-at="2018-03-28T17:20:53Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[abc@gmail.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[123456]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Enter valid password]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- hReckLogin -->
+        <test-method status="PASS" signature="hReckLogin(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.HReckAutomation.HReck.HReckLogin@2071aba1]" name="hReckLogin" duration-ms="13489" started-at="2018-03-28T17:20:53Z" data-provider="defaultDP" finished-at="2018-03-28T17:21:06Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[abcdef]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[123456]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Enter valid user name or emailid]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- hReckLogin -->
+        <test-method status="PASS" signature="hReckLogin(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.HReckAutomation.HReck.HReckLogin@2071aba1]" name="hReckLogin" duration-ms="6552" started-at="2018-03-28T17:21:06Z" data-provider="defaultDP" finished-at="2018-03-28T17:21:13Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[narendra]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Asdf@1234]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[http://hreck.techeasesystems.in/#/pending-grn]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- hReckLogin -->
+        <test-method status="PASS" signature="hReckLogout()[pri:0, instance:com.HReckAutomation.HReck.HReckLogin@2071aba1]" name="hReckLogout" duration-ms="4229" started-at="2018-03-28T17:21:13Z" data-provider="defaultDP" depends-on-methods="com.HReckAutomation.HReck.HReckLogin.hReckLogin" finished-at="2018-03-28T17:21:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- hReckLogout -->
+        <test-method status="PASS" signature="tearBrowser()[pri:0, instance:com.HReckAutomation.HReck.HReckLogin@2071aba1]" name="tearBrowser" is-config="true" duration-ms="2077" started-at="2018-03-28T17:21:17Z" finished-at="2018-03-28T17:21:19Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearBrowser -->
+      </class> <!-- com.HReckAutomation.HReck.HReckLogin -->
+    </test> <!-- Command line test 8518d949-5fcf-437f-a67c-3cd4392c6bad -->
+  </suite> <!-- MyDefault Test Suite -->
+</testng-results>
+>>>>>>> ccdfc338355e0e4ac10b48d4f82b7d1d6abb98cd
