@@ -38,14 +38,14 @@ public class AddCostCentre extends TestClassUtil{
         CommonUtilities.driver.findElement(KeyWordTool.getLocator("goToCostCentre", "addCostCentre")).click();
         Thread.sleep(1000);
         String actualUrl=CommonUtilities.driver.getCurrentUrl();
-        String Expected= "http://hreck.techeasesystems.in/#/cost-centre-master";
+        String Expected= "http://hreck.techeasesystems.in/#/cost-centre-master"+"abc";
         Assert.assertEquals(actualUrl, Expected);
 	}
 	
 	@AfterMethod()
 	public void takeScreenShotOnFailure(ITestResult testResult) throws IOException {
 		if (testResult.getStatus() == ITestResult.FAILURE) {
-			TakeScteenshot.getscreenshot( "HReckLogin" + System.currentTimeMillis());
+			TakeScteenshot.getscreenshot( "AddCostCentre" + System.currentTimeMillis());
 		}
 	}
 }

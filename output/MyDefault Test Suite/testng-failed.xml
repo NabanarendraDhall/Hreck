@@ -1,14 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [MyDefault Test Suite]">
-  <test name="Command line test 8518d949-5fcf-437f-a67c-3cd4392c6bad">
+  <test name="Command line test a9de5863-909e-4739-8a26-13382b1c41a7">
     <classes>
-      <class name="com.HReckAutomation.HReck.HReckLogin">
+      <class name="com.HReckAutomation.Masters.AddCostCentre">
         <methods>
-          <include name="hReckLogout"/>
-          <include name="hReckLogin"/>
+          <include name="goToCostCentre"/>
         </methods>
-      </class> <!-- com.HReckAutomation.HReck.HReckLogin -->
+      </class> <!-- com.HReckAutomation.Masters.AddCostCentre -->
     </classes>
-  </test> <!-- Command line test 8518d949-5fcf-437f-a67c-3cd4392c6bad -->
+  </test> <!-- Command line test a9de5863-909e-4739-8a26-13382b1c41a7 -->
+  <test name="Command line test a9de5863-909e-4739-8a26-13382b1c41a7(failed)">
+    <classes>
+      <class name="com.HReckAutomation.Masters.AddCostCentre">
+        <methods>
+          <include name="goToCostCentre"/>
+          <include name="openBrowser"/>
+          <include name="closeBrowser"/>
+          <include name="takeScreenShotOnFailure"/>
+        </methods>
+      </class> <!-- com.HReckAutomation.Masters.AddCostCentre -->
+    </classes>
+  </test> <!-- Command line test a9de5863-909e-4739-8a26-13382b1c41a7(failed) -->
 </suite> <!-- Failed suite [MyDefault Test Suite] -->

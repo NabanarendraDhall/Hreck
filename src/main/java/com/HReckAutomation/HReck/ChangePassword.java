@@ -184,7 +184,7 @@ public class ChangePassword extends TestClassUtil {
 	@AfterMethod()
 	public void takeScreenShotOnFailure(ITestResult testResult) throws IOException {
 		if (testResult.getStatus() == ITestResult.FAILURE) {
-			TakeScteenshot.getscreenshot( "HReckLogin" + System.currentTimeMillis());
+			TakeScteenshot.getscreenshot( "ChangePassHreck" + System.currentTimeMillis());
 		}
 	}
 }
