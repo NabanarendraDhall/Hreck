@@ -38,8 +38,10 @@ public class HReckLogin extends TestClassUtil {
 		driver.manage().window().maximize();
 		Thread.sleep(1000);
 	}
+
 	/*
-	 * This test case will check all the possible tests for login along with success case.
+	 * This test case will check all the possible tests for login along with success
+	 * case.
 	 * 
 	 */
 	@Test(priority = 0, dataProvider = "defaultDP")
@@ -84,10 +86,12 @@ public class HReckLogin extends TestClassUtil {
 			e.printStackTrace();
 		}
 	}
+
 	/*
-	 * The test case will verify the steps to logout. The test case is totally depend on login method
+	 * The test case will verify the steps to logout. The test case is totally
+	 * depend on login method
 	 */
-	@Test(dependsOnMethods="hReckLogin", dataProvider = "defaultDP")
+	@Test(dependsOnMethods = "hReckLogin", dataProvider = "defaultDP")
 	public void hReckLogout() throws AutomationFrameworkException, InterruptedException {
 		Thread.sleep(2000);
 		String dashBoardPageURL = driver.getCurrentUrl();
