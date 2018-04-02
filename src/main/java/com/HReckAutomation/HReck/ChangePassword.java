@@ -19,6 +19,7 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import com.HReckAutomation.CommonUtils.CommonUtilities;
+import com.HReckAutomation.CommonUtils.SendMail;
 import com.HReckAutomation.CommonUtils.TakeScteenshot;
 import com.mentorstudies.automationframework.common.TestClassUtil;
 import com.mentorstudies.automationframework.exception.AutomationFrameworkException;
@@ -184,6 +185,7 @@ public class ChangePassword extends TestClassUtil {
 	@AfterMethod()
 	public void takeScreenShotOnFailure(ITestResult testResult) throws IOException {
 		if (testResult.getStatus() == ITestResult.FAILURE) {
+			SendMail.mail();
 			TakeScteenshot.getscreenshot( "ChangePassHreck" + System.currentTimeMillis());
 		}
 	}

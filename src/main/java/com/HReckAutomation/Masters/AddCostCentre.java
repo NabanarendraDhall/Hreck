@@ -12,6 +12,7 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import com.HReckAutomation.CommonUtils.CommonUtilities;
+import com.HReckAutomation.CommonUtils.SendMail;
 import com.HReckAutomation.CommonUtils.TakeScteenshot;
 import com.mentorstudies.automationframework.common.TestClassUtil;
 import com.mentorstudies.automationframework.exception.AutomationFrameworkException;
@@ -38,13 +39,14 @@ public class AddCostCentre extends TestClassUtil{
         CommonUtilities.driver.findElement(KeyWordTool.getLocator("goToCostCentre", "addCostCentre")).click();
         Thread.sleep(1000);
         String actualUrl=CommonUtilities.driver.getCurrentUrl();
-        String Expected= "http://hreck.techeasesystems.in/#/cost-centre-master"+"abc";
+        String Expected= "http://hreck.techeasesystems.in/#/cost-centre-master";
         Assert.assertEquals(actualUrl, Expected);
 	}
 	
 	@AfterMethod()
 	public void takeScreenShotOnFailure(ITestResult testResult) throws IOException {
 		if (testResult.getStatus() == ITestResult.FAILURE) {
+			SendMail.mail();
 			TakeScteenshot.getscreenshot( "AddCostCentre" + System.currentTimeMillis());
 		}
 	}
