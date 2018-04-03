@@ -1,30 +1,223 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" total="1" passed="0">
+<testng-results skipped="1" failed="2" total="10" passed="7">
   <reporter-output>
   </reporter-output>
-  <suite name="MyDefault Test Suite" duration-ms="18228" started-at="2018-04-03T05:08:03Z" finished-at="2018-04-03T05:08:21Z">
+  <suite name="MyDefault Test Suite" duration-ms="64814" started-at="2018-04-03T07:01:41Z" finished-at="2018-04-03T07:02:45Z">
     <groups>
     </groups>
-    <test name="Command line test af8e7afc-d5ff-4eca-896f-8f98928bb842" duration-ms="18228" started-at="2018-04-03T05:08:03Z" finished-at="2018-04-03T05:08:21Z">
-      <class name="com.HReckAutomation.Masters.AddCostCentre">
-        <test-method status="PASS" signature="openBrowser()[pri:0, instance:com.HReckAutomation.Masters.AddCostCentre@637e6d71]" name="openBrowser" is-config="true" duration-ms="12050" started-at="2018-04-03T10:38:03Z" finished-at="2018-04-03T10:38:15Z">
+    <test name="Command line test 5301e6c2-6c64-4673-b933-5647918d48c6" duration-ms="64814" started-at="2018-04-03T07:01:41Z" finished-at="2018-04-03T07:02:45Z">
+      <class name="com.HReckAutomation.HReck.ChangePassword">
+        <test-method status="PASS" signature="openBrowser()[pri:0, instance:com.HReckAutomation.HReck.ChangePassword@690de27c]" name="openBrowser" is-config="true" duration-ms="14191" started-at="2018-04-03T12:31:41Z" finished-at="2018-04-03T12:31:55Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openBrowser -->
-        <test-method status="FAIL" signature="goToCostCentre()[pri:0, instance:com.HReckAutomation.Masters.AddCostCentre@637e6d71]" name="goToCostCentre" duration-ms="1226" started-at="2018-04-03T10:38:15Z" data-provider="defaultDP" finished-at="2018-04-03T10:38:16Z">
+        <test-method status="PASS" signature="buttonChk()[pri:0, instance:com.HReckAutomation.HReck.ChangePassword@690de27c]" name="buttonChk" duration-ms="2054" started-at="2018-04-03T12:31:55Z" data-provider="defaultDP" finished-at="2018-04-03T12:31:57Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- buttonChk -->
+        <test-method status="PASS" signature="chPassMain1(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:1, instance:com.HReckAutomation.HReck.ChangePassword@690de27c]" name="chPassMain1" duration-ms="2051" started-at="2018-04-03T12:31:57Z" data-provider="defaultDP" finished-at="2018-04-03T12:31:59Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[dasd]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[fsdf]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[fgfg]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Password must meet following requirement:
+* At least 8 characters
+* Max 15 characters
+* At least 1 capital letter
+* At least 1 special character]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- chPassMain1 -->
+        <test-method status="PASS" signature="takeScreenShotOnFailure(org.testng.ITestResult)[pri:0, instance:com.HReckAutomation.HReck.ChangePassword@690de27c]" name="takeScreenShotOnFailure" is-config="true" duration-ms="0" started-at="2018-04-03T12:31:57Z" finished-at="2018-04-03T12:31:57Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=buttonChk status=SUCCESS method=ChangePassword.buttonChk()[pri:0, instance:com.HReckAutomation.HReck.ChangePassword@690de27c] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- takeScreenShotOnFailure -->
+        <test-method status="PASS" signature="takeScreenShotOnFailure(org.testng.ITestResult)[pri:0, instance:com.HReckAutomation.HReck.ChangePassword@690de27c]" name="takeScreenShotOnFailure" is-config="true" duration-ms="0" started-at="2018-04-03T12:31:59Z" finished-at="2018-04-03T12:31:59Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=chPassMain1 status=SUCCESS method=ChangePassword.chPassMain1(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:1, instance:com.HReckAutomation.HReck.ChangePassword@690de27c] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- takeScreenShotOnFailure -->
+        <test-method status="PASS" signature="chPassMain2(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:2, instance:com.HReckAutomation.HReck.ChangePassword@690de27c]" name="chPassMain2" duration-ms="2049" started-at="2018-04-03T12:31:59Z" data-provider="defaultDP" finished-at="2018-04-03T12:32:01Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[dadad]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Asdf@1234]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Asdf@123]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Entered password doesn’t match with New password.]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- chPassMain2 -->
+        <test-method status="PASS" signature="takeScreenShotOnFailure(org.testng.ITestResult)[pri:0, instance:com.HReckAutomation.HReck.ChangePassword@690de27c]" name="takeScreenShotOnFailure" is-config="true" duration-ms="0" started-at="2018-04-03T12:32:01Z" finished-at="2018-04-03T12:32:01Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=chPassMain2 status=SUCCESS method=ChangePassword.chPassMain2(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:2, instance:com.HReckAutomation.HReck.ChangePassword@690de27c] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- takeScreenShotOnFailure -->
+        <test-method status="PASS" signature="chPassMain(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:3, instance:com.HReckAutomation.HReck.ChangePassword@690de27c]" name="chPassMain" duration-ms="2053" started-at="2018-04-03T12:32:01Z" data-provider="defaultDP" finished-at="2018-04-03T12:32:03Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Asdf@123]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Asdf@1234]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Asdf@1234]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Enter valid Current password]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- chPassMain -->
+        <test-method status="PASS" signature="takeScreenShotOnFailure(org.testng.ITestResult)[pri:0, instance:com.HReckAutomation.HReck.ChangePassword@690de27c]" name="takeScreenShotOnFailure" is-config="true" duration-ms="0" started-at="2018-04-03T12:32:03Z" finished-at="2018-04-03T12:32:03Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=chPassMain status=SUCCESS method=ChangePassword.chPassMain(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:3, instance:com.HReckAutomation.HReck.ChangePassword@690de27c] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- takeScreenShotOnFailure -->
+        <test-method status="PASS" signature="chPassMain(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:3, instance:com.HReckAutomation.HReck.ChangePassword@690de27c]" name="chPassMain" duration-ms="2045" started-at="2018-04-03T12:32:03Z" data-provider="defaultDP" finished-at="2018-04-03T12:32:05Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Asdf@1234]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Asdf@1234]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Asdf@1234]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Password Changed successfully]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- chPassMain -->
+        <test-method status="PASS" signature="takeScreenShotOnFailure(org.testng.ITestResult)[pri:0, instance:com.HReckAutomation.HReck.ChangePassword@690de27c]" name="takeScreenShotOnFailure" is-config="true" duration-ms="0" started-at="2018-04-03T12:32:05Z" finished-at="2018-04-03T12:32:05Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=chPassMain status=SUCCESS method=ChangePassword.chPassMain(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:3, instance:com.HReckAutomation.HReck.ChangePassword@690de27c] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- takeScreenShotOnFailure -->
+        <test-method status="PASS" signature="quitBrowser()[pri:0, instance:com.HReckAutomation.HReck.ChangePassword@690de27c]" name="quitBrowser" is-config="true" duration-ms="1075" started-at="2018-04-03T12:32:05Z" finished-at="2018-04-03T12:32:06Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quitBrowser -->
+      </class> <!-- com.HReckAutomation.HReck.ChangePassword -->
+      <class name="com.HReckAutomation.HReck.HReckLogin">
+        <test-method status="PASS" signature="openBrowser()[pri:0, instance:com.HReckAutomation.HReck.HReckLogin@7078e7fb]" name="openBrowser" is-config="true" duration-ms="8310" started-at="2018-04-03T12:32:06Z" finished-at="2018-04-03T12:32:14Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openBrowser -->
+        <test-method status="FAIL" signature="hReckLogin(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.HReckAutomation.HReck.HReckLogin@7078e7fb]" name="hReckLogin" duration-ms="10365" started-at="2018-04-03T12:32:14Z" data-provider="defaultDP" finished-at="2018-04-03T12:32:25Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[abc@gmail.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[123456]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Enter valid password]]>
+              </value>
+            </param>
+          </params>
           <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[expected [http://hreck.techeasesystems.in/#/cost-centre-masterabc] but found [http://hreck.techeasesystems.in/#/cost-centre-master]]]>
+              <![CDATA[Test case failed expected [Enter valid password] but found [Something went wrong]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [http://hreck.techeasesystems.in/#/cost-centre-masterabc] but found [http://hreck.techeasesystems.in/#/cost-centre-master]
+              <![CDATA[java.lang.AssertionError: Test case failed expected [Enter valid password] but found [Something went wrong]
 	at org.testng.Assert.fail(Assert.java:94)
 	at org.testng.Assert.failNotEquals(Assert.java:513)
 	at org.testng.Assert.assertEqualsImpl(Assert.java:135)
 	at org.testng.Assert.assertEquals(Assert.java:116)
 	at org.testng.Assert.assertEquals(Assert.java:190)
-	at org.testng.Assert.assertEquals(Assert.java:200)
-	at com.HReckAutomation.Masters.AddCostCentre.goToCostCentre(AddCostCentre.java:43)
+	at com.HReckAutomation.HReck.HReckLogin.hReckLogin(HReckLogin.java:76)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -58,23 +251,215 @@
           </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- goToCostCentre -->
-        <test-method status="PASS" signature="takeScreenShotOnFailure(org.testng.ITestResult)[pri:0, instance:com.HReckAutomation.Masters.AddCostCentre@637e6d71]" name="takeScreenShotOnFailure" is-config="true" duration-ms="3834" started-at="2018-04-03T10:38:16Z" finished-at="2018-04-03T10:38:20Z">
+        </test-method> <!-- hReckLogin -->
+        <test-method status="PASS" signature="takeScreenShotOnFailure(org.testng.ITestResult)[pri:0, instance:com.HReckAutomation.HReck.HReckLogin@7078e7fb]" name="takeScreenShotOnFailure" is-config="true" duration-ms="3708" started-at="2018-04-03T12:32:25Z" finished-at="2018-04-03T12:32:29Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=goToCostCentre status=FAILURE method=AddCostCentre.goToCostCentre()[pri:0, instance:com.HReckAutomation.Masters.AddCostCentre@637e6d71] output={null}]]]>
+                <![CDATA[[TestResult name=hReckLogin status=FAILURE method=HReckLogin.hReckLogin(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.HReckAutomation.HReck.HReckLogin@7078e7fb] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- takeScreenShotOnFailure -->
-        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:com.HReckAutomation.Masters.AddCostCentre@637e6d71]" name="closeBrowser" is-config="true" duration-ms="1104" started-at="2018-04-03T10:38:20Z" finished-at="2018-04-03T10:38:21Z">
+        <test-method status="PASS" signature="hReckLogin(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.HReckAutomation.HReck.HReckLogin@7078e7fb]" name="hReckLogin" duration-ms="91" started-at="2018-04-03T12:32:29Z" data-provider="defaultDP" finished-at="2018-04-03T12:32:29Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[abcdef]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[123456]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Enter valid user name or emailid]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- hReckLogin -->
+        <test-method status="PASS" signature="takeScreenShotOnFailure(org.testng.ITestResult)[pri:0, instance:com.HReckAutomation.HReck.HReckLogin@7078e7fb]" name="takeScreenShotOnFailure" is-config="true" duration-ms="0" started-at="2018-04-03T12:32:29Z" finished-at="2018-04-03T12:32:29Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=hReckLogin status=SUCCESS method=HReckLogin.hReckLogin(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.HReckAutomation.HReck.HReckLogin@7078e7fb] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- takeScreenShotOnFailure -->
+        <test-method status="PASS" signature="hReckLogin(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.HReckAutomation.HReck.HReckLogin@7078e7fb]" name="hReckLogin" duration-ms="61" started-at="2018-04-03T12:32:29Z" data-provider="defaultDP" finished-at="2018-04-03T12:32:29Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[narendra]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Asdf@1234]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[http://hreck.techeasesystems.in/#/pending-grn]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- hReckLogin -->
+        <test-method status="PASS" signature="tearBrowser()[pri:0, instance:com.HReckAutomation.HReck.HReckLogin@7078e7fb]" name="tearBrowser" is-config="true" duration-ms="151" started-at="2018-04-03T12:32:29Z" finished-at="2018-04-03T12:32:29Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearBrowser -->
+        <test-method status="SKIP" signature="hReckLogout()[pri:0, instance:com.HReckAutomation.HReck.HReckLogin@7078e7fb]" name="hReckLogout" duration-ms="0" started-at="2018-04-03T12:32:29Z" data-provider="defaultDP" depends-on-methods="com.HReckAutomation.HReck.HReckLogin.hReckLogin" finished-at="2018-04-03T12:32:29Z">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method HReckLogin.hReckLogout()[pri:0, instance:com.HReckAutomation.HReck.HReckLogin@7078e7fb] depends on not successfully finished methods]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method HReckLogin.hReckLogout()[pri:0, instance:com.HReckAutomation.HReck.HReckLogin@7078e7fb] depends on not successfully finished methods
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1037)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:782)
+	at org.testng.TestRunner.run(TestRunner.java:632)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+	at org.testng.TestNG.run(TestNG.java:1064)
+	at com.mentorstudies.automationframework.TestRunner.main(TestRunner.java:117)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.codehaus.mojo.exec.ExecJavaMojo$1.run(ExecJavaMojo.java:294)
+	at java.lang.Thread.run(Thread.java:748)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- hReckLogout -->
+        <test-method status="PASS" signature="takeScreenShotOnFailure(org.testng.ITestResult)[pri:0, instance:com.HReckAutomation.HReck.HReckLogin@7078e7fb]" name="takeScreenShotOnFailure" is-config="true" duration-ms="0" started-at="2018-04-03T12:32:29Z" finished-at="2018-04-03T12:32:29Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=hReckLogin status=SUCCESS method=HReckLogin.hReckLogin(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.HReckAutomation.HReck.HReckLogin@7078e7fb] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- takeScreenShotOnFailure -->
+      </class> <!-- com.HReckAutomation.HReck.HReckLogin -->
+      <class name="com.HReckAutomation.Masters.AddCostCentre">
+        <test-method status="PASS" signature="openBrowser()[pri:0, instance:com.HReckAutomation.Masters.AddCostCentre@5f567667]" name="openBrowser" is-config="true" duration-ms="11674" started-at="2018-04-03T12:32:29Z" finished-at="2018-04-03T12:32:41Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openBrowser -->
+        <test-method status="FAIL" signature="goToCostCentre()[pri:0, instance:com.HReckAutomation.Masters.AddCostCentre@5f567667]" name="goToCostCentre" duration-ms="45" started-at="2018-04-03T12:32:41Z" data-provider="defaultDP" finished-at="2018-04-03T12:32:41Z">
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[no such element: Unable to locate element: {"method":"link text","selector":"Masters"}
+  (Session info: chrome=65.0.3325.181)
+  (Driver info: chromedriver=2.37.543627 (63642262d9fb93fb4ab52398be4286d844092a5e),platform=Windows NT 6.1.7601 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 45 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
+System info: host: 'MUMTEWD0500', ip: '192.168.101.143', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_162'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.37.543627 (63642262d9fb93fb4ab52398be4286d844092a5e), userDataDir=C:\Users\NAREND~1.DHA\AppData\Local\Temp\scoped_dir3000_31973}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=65.0.3325.181, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=false, acceptInsecureCerts=false, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
+Session ID: 34d4ba72b6c77ef00cc75acaed77bacd
+*** Element info: {Using=link text, value=Masters}]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"link text","selector":"Masters"}
+  (Session info: chrome=65.0.3325.181)
+  (Driver info: chromedriver=2.37.543627 (63642262d9fb93fb4ab52398be4286d844092a5e),platform=Windows NT 6.1.7601 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 45 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
+System info: host: 'MUMTEWD0500', ip: '192.168.101.143', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_162'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.37.543627 (63642262d9fb93fb4ab52398be4286d844092a5e), userDataDir=C:\Users\NAREND~1.DHA\AppData\Local\Temp\scoped_dir3000_31973}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=65.0.3325.181, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=false, acceptInsecureCerts=false, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
+Session ID: 34d4ba72b6c77ef00cc75acaed77bacd
+*** Element info: {Using=link text, value=Masters}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByLinkText(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByLinkText.findElement(By.java:246)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at com.HReckAutomation.Masters.AddCostCentre.goToCostCentre(AddCostCentre.java:35)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:643)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:820)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1128)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:782)
+	at org.testng.TestRunner.run(TestRunner.java:632)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+	at org.testng.TestNG.run(TestNG.java:1064)
+	at com.mentorstudies.automationframework.TestRunner.main(TestRunner.java:117)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.codehaus.mojo.exec.ExecJavaMojo$1.run(ExecJavaMojo.java:294)
+	at java.lang.Thread.run(Thread.java:748)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- goToCostCentre -->
+        <test-method status="PASS" signature="takeScreenShotOnFailure(org.testng.ITestResult)[pri:0, instance:com.HReckAutomation.Masters.AddCostCentre@5f567667]" name="takeScreenShotOnFailure" is-config="true" duration-ms="4007" started-at="2018-04-03T12:32:41Z" finished-at="2018-04-03T12:32:45Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=goToCostCentre status=FAILURE method=AddCostCentre.goToCostCentre()[pri:0, instance:com.HReckAutomation.Masters.AddCostCentre@5f567667] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- takeScreenShotOnFailure -->
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:com.HReckAutomation.Masters.AddCostCentre@5f567667]" name="closeBrowser" is-config="true" duration-ms="858" started-at="2018-04-03T12:32:45Z" finished-at="2018-04-03T12:32:45Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->
       </class> <!-- com.HReckAutomation.Masters.AddCostCentre -->
-    </test> <!-- Command line test af8e7afc-d5ff-4eca-896f-8f98928bb842 -->
+    </test> <!-- Command line test 5301e6c2-6c64-4673-b933-5647918d48c6 -->
   </suite> <!-- MyDefault Test Suite -->
 </testng-results>
