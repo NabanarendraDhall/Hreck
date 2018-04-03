@@ -1,51 +1,52 @@
-<<<<<<< HEAD
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [MyDefault Test Suite]">
-  <test name="Command line test 6b67cb8c-3eeb-41d7-b0e9-bcea8e81a06c">
+  <test name="Command line test c10c96b8-b9d2-492e-aed1-1c8d31bbe398">
     <classes>
       <class name="com.HReckAutomation.HReck.ChangePassword">
         <methods>
-          <include name="changePassword"/>
+          <include name="buttonChk"/>
+          <include name="chPassMain2"/>
+          <include name="chPassMain1"/>
+          <include name="chPassMain"/>
         </methods>
       </class> <!-- com.HReckAutomation.HReck.ChangePassword -->
-      <class name="com.HReckAutomation.HReck.forgotPassword">
-        <methods>
-          <include name="changePassword"/>
-        </methods>
-      </class> <!-- com.HReckAutomation.HReck.forgotPassword -->
-    </classes>
-  </test> <!-- Command line test 6b67cb8c-3eeb-41d7-b0e9-bcea8e81a06c -->
-  <test name="Command line test 6b67cb8c-3eeb-41d7-b0e9-bcea8e81a06c(failed)">
-    <classes>
-      <class name="com.HReckAutomation.HReck.ChangePassword">
-        <methods>
-          <include name="quitBrowser"/>
-          <include name="changePassword"/>
-          <include name="openBrowser"/>
-        </methods>
-      </class> <!-- com.HReckAutomation.HReck.ChangePassword -->
-      <class name="com.HReckAutomation.HReck.forgotPassword">
-        <methods>
-          <include name="changePassword"/>
-        </methods>
-      </class> <!-- com.HReckAutomation.HReck.forgotPassword -->
-    </classes>
-  </test> <!-- Command line test 6b67cb8c-3eeb-41d7-b0e9-bcea8e81a06c(failed) -->
-</suite> <!-- Failed suite [MyDefault Test Suite] -->
-=======
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [MyDefault Test Suite]">
-  <test name="Command line test 8518d949-5fcf-437f-a67c-3cd4392c6bad">
-    <classes>
       <class name="com.HReckAutomation.HReck.HReckLogin">
         <methods>
           <include name="hReckLogout"/>
           <include name="hReckLogin"/>
         </methods>
       </class> <!-- com.HReckAutomation.HReck.HReckLogin -->
+      <class name="com.HReckAutomation.HReck.forgotPassword">
+        <methods>
+          <include name="forgotPasswordMain"/>
+        </methods>
+      </class> <!-- com.HReckAutomation.HReck.forgotPassword -->
     </classes>
-  </test> <!-- Command line test 8518d949-5fcf-437f-a67c-3cd4392c6bad -->
+  </test> <!-- Command line test c10c96b8-b9d2-492e-aed1-1c8d31bbe398 -->
+  <test name="Command line test c10c96b8-b9d2-492e-aed1-1c8d31bbe398(failed)">
+    <classes>
+      <class name="com.HReckAutomation.HReck.forgotPassword">
+        <methods>
+          <include name="openBrowser"/>
+          <include name="closeBrowser"/>
+          <include name="forgotPasswordMain" invocation-numbers="0 1"/>
+        </methods>
+      </class> <!-- com.HReckAutomation.HReck.forgotPassword -->
+      <class name="com.HReckAutomation.HReck.HReckLogin">
+        <methods>
+          <include name="tearBrowser"/>
+          <include name="openBrowser"/>
+          <include name="hReckLogin"/>
+          <include name="hReckLogout"/>
+        </methods>
+      </class> <!-- com.HReckAutomation.HReck.HReckLogin -->
+      <class name="com.HReckAutomation.HReck.ChangePassword">
+        <methods>
+          <include name="quitBrowser"/>
+          <include name="openBrowser"/>
+        </methods>
+      </class> <!-- com.HReckAutomation.HReck.ChangePassword -->
+    </classes>
+  </test> <!-- Command line test c10c96b8-b9d2-492e-aed1-1c8d31bbe398(failed) -->
 </suite> <!-- Failed suite [MyDefault Test Suite] -->
->>>>>>> ccdfc338355e0e4ac10b48d4f82b7d1d6abb98cd

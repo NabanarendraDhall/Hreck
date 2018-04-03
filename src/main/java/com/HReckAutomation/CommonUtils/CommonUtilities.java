@@ -29,6 +29,17 @@ public class CommonUtilities {
 
 	}
 
+	public static void openBrowser(boolean status) throws IOException, AutomationFrameworkException {
+		if (status == true) {
+			CommonUtilities.setvaluefromconfig();
+			driver = new DefaultDriverManager().getDriver();
+			driver.get(CommonUtilities.URL);
+			driver.manage().window().maximize();
+		} else {
+			System.out.println("Browser not opened");
+		}
+	}
+
 	public static void AccessToHReckURL(boolean status)
 			throws IOException, AutomationFrameworkException, InterruptedException {
 		if (status == true) {
@@ -49,10 +60,11 @@ public class CommonUtilities {
 			System.out.println("User " + CommonUtilities.UID + " loggedIn successfully ");
 			Thread.sleep(1000);
 		} else {
-//			driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-//			driver.findElement(By.xpath("html/body/hreck-app/app-home/div[1]/div/button")).click();
-//			driver.findElement(By.xpath("html/body/hreck-app/app-home/div[1]/div/ul/li[2]/a")).click();
-//			System.out.println("User " + CommonUtilities.UID + " loggedOut successfully ");
+			// driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+			// driver.findElement(By.xpath("html/body/hreck-app/app-home/div[1]/div/button")).click();
+			// driver.findElement(By.xpath("html/body/hreck-app/app-home/div[1]/div/ul/li[2]/a")).click();
+			// System.out.println("User " + CommonUtilities.UID + " loggedOut successfully
+			// ");
 			driver.quit();
 
 		}
