@@ -1,54 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [MyDefault Test Suite]">
-  <test name="Command line test 4b5643c8-fbe6-4667-b15b-5aa2943b2bc3">
+  <test name="Command line test af8e7afc-d5ff-4eca-896f-8f98928bb842">
     <classes>
-      <class name="com.HReckAutomation.HReck.ChangePassword">
-        <methods>
-          <include name="buttonChk"/>
-          <include name="chPassMain2"/>
-          <include name="chPassMain1"/>
-          <include name="chPassMain"/>
-        </methods>
-      </class> <!-- com.HReckAutomation.HReck.ChangePassword -->
-      <class name="com.HReckAutomation.HReck.HReckLogin">
-        <methods>
-          <include name="hReckLogout"/>
-          <include name="hReckLogin"/>
-        </methods>
-      </class> <!-- com.HReckAutomation.HReck.HReckLogin -->
       <class name="com.HReckAutomation.Masters.AddCostCentre">
         <methods>
           <include name="goToCostCentre"/>
         </methods>
       </class> <!-- com.HReckAutomation.Masters.AddCostCentre -->
     </classes>
-  </test> <!-- Command line test 4b5643c8-fbe6-4667-b15b-5aa2943b2bc3 -->
-  <test name="Command line test 4b5643c8-fbe6-4667-b15b-5aa2943b2bc3(failed)">
+  </test> <!-- Command line test af8e7afc-d5ff-4eca-896f-8f98928bb842 -->
+  <test name="Command line test af8e7afc-d5ff-4eca-896f-8f98928bb842(failed)">
     <classes>
       <class name="com.HReckAutomation.Masters.AddCostCentre">
         <methods>
+          <include name="goToCostCentre"/>
           <include name="openBrowser"/>
           <include name="closeBrowser"/>
           <include name="takeScreenShotOnFailure"/>
         </methods>
       </class> <!-- com.HReckAutomation.Masters.AddCostCentre -->
-      <class name="com.HReckAutomation.HReck.HReckLogin">
-        <methods>
-          <include name="takeScreenShotOnFailure"/>
-          <include name="tearBrowser"/>
-          <include name="openBrowser"/>
-          <include name="hReckLogin"/>
-          <include name="hReckLogout"/>
-        </methods>
-      </class> <!-- com.HReckAutomation.HReck.HReckLogin -->
-      <class name="com.HReckAutomation.HReck.ChangePassword">
-        <methods>
-          <include name="takeScreenShotOnFailure"/>
-          <include name="quitBrowser"/>
-          <include name="openBrowser"/>
-        </methods>
-      </class> <!-- com.HReckAutomation.HReck.ChangePassword -->
     </classes>
-  </test> <!-- Command line test 4b5643c8-fbe6-4667-b15b-5aa2943b2bc3(failed) -->
+  </test> <!-- Command line test af8e7afc-d5ff-4eca-896f-8f98928bb842(failed) -->
 </suite> <!-- Failed suite [MyDefault Test Suite] -->

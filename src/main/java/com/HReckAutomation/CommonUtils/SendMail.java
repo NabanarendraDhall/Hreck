@@ -24,7 +24,7 @@ public class SendMail {
 	public static void mail() {
 		final String user = "narendra.dhall@techeasesystems.in";// change accordingly
 		final String password = "Narendra@123";// change accordingly
-		String[] to = { "dhallnabanarendra@gmail.com", "vikram.lokhande@techeasesystems.in" };// change accordingly
+		String[] to = { "dhallnabanarendra@gmail.com", "ajit.swami@techeasesystems.in","narendra.dhall@techeasesystems.in" };// change accordingly
 		// Get the session object
 		Properties props = new Properties();
 		props.put("mail.smtp.host", "smtpout.secureserver.net");
@@ -44,25 +44,28 @@ public class SendMail {
 			for (String toEmail : to) {
 				message.addRecipient(Message.RecipientType.TO, new InternetAddress(toEmail));
 			}
-			DateFormat df = new SimpleDateFormat("dd_MM_yy_HH_mm_ss");
+			DateFormat df = new SimpleDateFormat("dd/MM/yyyy-HH:mm:ss");
 			Date dateobj = new Date();
-			message.setSubject("TES AutomationTest Report: " + df.format(dateobj));
+			message.setSubject("TES Automation Test Report: " + df.format(dateobj));
 			// message.setText("This is simple program of sending email using JavaMail
 			// API");
 			BodyPart messageBodyPart = new MimeBodyPart();
 			// Fill the message
 			messageBodyPart.setText(
-					"Hi Team,\nPlease find the automation test report in the below attachment.\nThe attachment is a HTML file so open it with an editor for best result.");
+					"Hi Team,\nPlease find the automation test report on "+df.format(dateobj)+" in the below attachment.\nThe attachment is a HTML file so open it with an editor for best result.");
 			// Create a multi part message
 			Multipart multipart = new MimeMultipart();
 			// Set text message part
 			multipart.addBodyPart(messageBodyPart);
 			// Part two is attachment
 			messageBodyPart = new MimeBodyPart();
+	//		String []filename = {"D:\\WorkSpace_Naba\\HReck\\test-output\\emailable-report.html",TakeScteenshot.folderName()};
 			String filename = "D:\\WorkSpace_Naba\\HReck\\test-output\\emailable-report.html";
+	//		for(String files: filename) {
 			DataSource source = new FileDataSource(filename);
 			messageBodyPart.setDataHandler(new DataHandler(source));
 			messageBodyPart.setFileName(filename);
+	//		}
 			multipart.addBodyPart(messageBodyPart);
 			// Send the complete message parts
 			message.setContent(multipart);
