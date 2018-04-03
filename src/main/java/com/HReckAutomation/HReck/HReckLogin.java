@@ -1,5 +1,4 @@
 package com.HReckAutomation.HReck;
-
 /*
  * 
  * Author : Nabanarendra Dhall
@@ -10,22 +9,24 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
+import org.testng.ITestResult;
 import org.testng.annotations.AfterClass;
-import org.testng.annotations.AfterSuite;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
 
 import com.HReckAutomation.CommonUtils.CommonUtilities;
+import com.HReckAutomation.CommonUtils.SendMail;
+import com.HReckAutomation.CommonUtils.TakeScteenshot;
 import com.mentorstudies.automationframework.common.TestClassUtil;
 import com.mentorstudies.automationframework.exception.AutomationFrameworkException;
 import com.mentorstudies.automationframework.util.common.KeyWordTool;
 import com.mentorstudies.automationframework.util.impl.DefaultDriverManager;
 
+
 public class HReckLogin extends TestClassUtil {
 	WebDriver driver;
 	String actual, expected;
-
 	/*
 	 * openBrowser will open the configured URL as per config.properties
 	 */
@@ -63,39 +64,28 @@ public class HReckLogin extends TestClassUtil {
 			Thread.sleep(2000);
 			String afterLoginPageURL = driver.getCurrentUrl();
 			System.out.println(afterLoginPageURL);
-
 			if (loginPageURL.equals(afterLoginPageURL)) {
-				System.out.println("eNTERED iF");
-
-				if (loginPageURL.equals(afterLoginPageURL)) {
-					System.out.println("Entered If");
-
-					Set handles = driver.getWindowHandles();
-					for (String handle1 : driver.getWindowHandles()) {
-						driver.switchTo().window(handle1);
-						Thread.sleep(2000);
-						String ErrorMessage = driver
-								.findElement(KeyWordTool.getLocator("hReckLogin", "popUpErrorMessage")).getText();
-						driver.findElement(KeyWordTool.getLocator("hReckLogin", "PopUpOkButton"));
-						Assert.assertEquals(ErrorMessage, z, "Test case failed");
-						driver.navigate().refresh();
-					}
-
-				} else
-
-				{
-					System.out.println("Entered Else");
-					String dashBoardPgeURL = driver.getCurrentUrl();
-					System.out.println("After Login URL are : " + dashBoardPgeURL);
-					Assert.assertEquals(dashBoardPgeURL, z, "Test case passed");
+				System.out.println("Entered If");
+				Set handles = driver.getWindowHandles();
+				for (String handle1 : driver.getWindowHandles()) {
+					driver.switchTo().window(handle1);
+					Thread.sleep(2000);
+					String ErrorMessage = driver.findElement(KeyWordTool.getLocator("hReckLogin", "popUpErrorMessage"))
+							.getText();
+					driver.findElement(KeyWordTool.getLocator("hReckLogin", "PopUpOkButton"));
+					Assert.assertEquals(ErrorMessage, z, "Test case failed");
+					driver.navigate().refresh();
 				}
+			} else {
+				System.out.println("Entered Else");
+				String dashBoardPgeURL = driver.getCurrentUrl();
+				System.out.println("After Login URL are : "+dashBoardPgeURL);
+				Assert.assertEquals(dashBoardPgeURL, z, "Test case passed");
 			}
-		}
 
-		catch (Exception e) {
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		;
 	}
 
 	/*
@@ -116,5 +106,12 @@ public class HReckLogin extends TestClassUtil {
 	@AfterClass()
 	public void tearBrowser() {
 		driver.close();
+	}
+	@AfterMethod()
+	public void takeScreenShotOnFailure(ITestResult testResult) throws IOException {
+		if (testResult.getStatus() == ITestResult.FAILURE) {
+			SendMail.mail();
+			TakeScteenshot.getscreenshot( "HReckLogin" + System.currentTimeMillis());
+		}
 	}
 }

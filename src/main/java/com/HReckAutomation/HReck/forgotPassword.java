@@ -112,6 +112,7 @@ public class forgotPassword extends TestClassUtil
 								myPass = abc[j + 1];
 								System.out.println(myPass);
 
+
 								CommonUtilities.driver.findElement(By.cssSelector("body")).sendKeys(Keys.CONTROL + "w");
 								System.out.println("Email tab closed");
 								Thread.sleep(5000);
@@ -137,5 +138,6 @@ public class forgotPassword extends TestClassUtil
 				}
 			}
 		}
+
 	}
 }
