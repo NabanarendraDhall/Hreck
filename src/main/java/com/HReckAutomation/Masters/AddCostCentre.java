@@ -18,21 +18,24 @@ import com.mentorstudies.automationframework.common.TestClassUtil;
 import com.mentorstudies.automationframework.exception.AutomationFrameworkException;
 import com.mentorstudies.automationframework.util.common.KeyWordTool;
 
-public class AddCostCentre extends TestClassUtil{
+public class AddCostCentre extends TestClassUtil
+{
 
 	@BeforeClass
-	public void openBrowser() throws IOException, AutomationFrameworkException, InterruptedException {
+	public void openBrowser() throws IOException, AutomationFrameworkException, InterruptedException 
+	{
 		CommonUtilities.AccessToHReckURL(true);
 	}
 	
 	@AfterClass
-	public void closeBrowser() throws IOException, AutomationFrameworkException, InterruptedException {
+	public void closeBrowser() throws IOException, AutomationFrameworkException, InterruptedException 
+	{
 		CommonUtilities.AccessToHReckURL(false);
 	}
 	@Test(priority=0,dataProvider="defaultDP")
-	public void goToCostCentre() throws AutomationFrameworkException, InterruptedException {
+	public void AddCostCentre() throws AutomationFrameworkException, InterruptedException {
 		
-		CommonUtilities.driver.findElement(KeyWordTool.getLocator("goToCostCentre", "masters")).click();
+		CommonUtilities.driver.findElement(KeyWordTool.getLocator("AddCostCentre", "masters")).click();
 		WebElement element = CommonUtilities.driver.findElement(KeyWordTool.getLocator("goToCostCentre", "costCentre"));
         Actions action = new Actions(CommonUtilities.driver);
         action.moveToElement(element).build().perform();

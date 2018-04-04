@@ -1,86 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [MyDefault Test Suite]">
-<<<<<<< HEAD
-  <test name="Command line test c10c96b8-b9d2-492e-aed1-1c8d31bbe398">
-=======
-  <test name="Command line test 4b5643c8-fbe6-4667-b15b-5aa2943b2bc3">
->>>>>>> c42c5751acf42f328d39c1e4093deefa92c79515
+  <test name="Command line test 91c71fb3-9705-4ede-93b7-5d2953e943ed">
     <classes>
-      <class name="com.HReckAutomation.HReck.ChangePassword">
+      <class name="com.HReckAutomation.Masters.AddSupplier">
         <methods>
-          <include name="buttonChk"/>
-          <include name="chPassMain2"/>
-          <include name="chPassMain1"/>
-          <include name="chPassMain"/>
+          <include name="gotoSupplier"/>
         </methods>
-      </class> <!-- com.HReckAutomation.HReck.ChangePassword -->
-      <class name="com.HReckAutomation.HReck.HReckLogin">
-        <methods>
-          <include name="hReckLogout"/>
-          <include name="hReckLogin"/>
-        </methods>
-      </class> <!-- com.HReckAutomation.HReck.HReckLogin -->
-<<<<<<< HEAD
-      <class name="com.HReckAutomation.HReck.forgotPassword">
-        <methods>
-          <include name="forgotPasswordMain"/>
-        </methods>
-      </class> <!-- com.HReckAutomation.HReck.forgotPassword -->
+      </class> <!-- com.HReckAutomation.Masters.AddSupplier -->
     </classes>
-  </test> <!-- Command line test c10c96b8-b9d2-492e-aed1-1c8d31bbe398 -->
-  <test name="Command line test c10c96b8-b9d2-492e-aed1-1c8d31bbe398(failed)">
+  </test> <!-- Command line test 91c71fb3-9705-4ede-93b7-5d2953e943ed -->
+  <test name="Command line test 91c71fb3-9705-4ede-93b7-5d2953e943ed(failed)">
     <classes>
-      <class name="com.HReckAutomation.HReck.forgotPassword">
+      <class name="com.HReckAutomation.Masters.AddSupplier">
         <methods>
+          <include name="gotoSupplier"/>
+          <include name="takeScreenShotOnFailure"/>
           <include name="openBrowser"/>
           <include name="closeBrowser"/>
-          <include name="forgotPasswordMain" invocation-numbers="0 1"/>
         </methods>
-      </class> <!-- com.HReckAutomation.HReck.forgotPassword -->
-      <class name="com.HReckAutomation.HReck.HReckLogin">
-        <methods>
-=======
-      <class name="com.HReckAutomation.Masters.AddCostCentre">
-        <methods>
-          <include name="goToCostCentre"/>
-        </methods>
-      </class> <!-- com.HReckAutomation.Masters.AddCostCentre -->
+      </class> <!-- com.HReckAutomation.Masters.AddSupplier -->
     </classes>
-  </test> <!-- Command line test 4b5643c8-fbe6-4667-b15b-5aa2943b2bc3 -->
-  <test name="Command line test 4b5643c8-fbe6-4667-b15b-5aa2943b2bc3(failed)">
-    <classes>
-      <class name="com.HReckAutomation.Masters.AddCostCentre">
-        <methods>
-          <include name="openBrowser"/>
-          <include name="closeBrowser"/>
-          <include name="takeScreenShotOnFailure"/>
-        </methods>
-      </class> <!-- com.HReckAutomation.Masters.AddCostCentre -->
-      <class name="com.HReckAutomation.HReck.HReckLogin">
-        <methods>
-          <include name="takeScreenShotOnFailure"/>
->>>>>>> c42c5751acf42f328d39c1e4093deefa92c79515
-          <include name="tearBrowser"/>
-          <include name="openBrowser"/>
-          <include name="hReckLogin"/>
-          <include name="hReckLogout"/>
-        </methods>
-      </class> <!-- com.HReckAutomation.HReck.HReckLogin -->
-      <class name="com.HReckAutomation.HReck.ChangePassword">
-        <methods>
-<<<<<<< HEAD
-=======
-          <include name="takeScreenShotOnFailure"/>
->>>>>>> c42c5751acf42f328d39c1e4093deefa92c79515
-          <include name="quitBrowser"/>
-          <include name="openBrowser"/>
-        </methods>
-      </class> <!-- com.HReckAutomation.HReck.ChangePassword -->
-    </classes>
-<<<<<<< HEAD
-  </test> <!-- Command line test c10c96b8-b9d2-492e-aed1-1c8d31bbe398(failed) -->
-=======
-  </test> <!-- Command line test 4b5643c8-fbe6-4667-b15b-5aa2943b2bc3(failed) -->
->>>>>>> c42c5751acf42f328d39c1e4093deefa92c79515
+  </test> <!-- Command line test 91c71fb3-9705-4ede-93b7-5d2953e943ed(failed) -->
 </suite> <!-- Failed suite [MyDefault Test Suite] -->
