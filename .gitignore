@@ -1,4 +1,5 @@
-/target/
-/
+target
+\
 output
-/test-output
+\test-output
+input\TestCases.xlsx
