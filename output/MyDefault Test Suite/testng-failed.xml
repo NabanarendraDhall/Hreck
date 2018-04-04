@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [MyDefault Test Suite]">
-  <test name="Command line test 88b20d86-4d96-4bad-a020-be6476f12a1a">
+  <test name="Command line test 40ab8da7-c38a-4ab2-af1a-453e519b71fc">
     <classes>
       <class name="com.HReckAutomation.HReck.forgotPassword">
         <methods>
@@ -9,8 +9,8 @@
         </methods>
       </class> <!-- com.HReckAutomation.HReck.forgotPassword -->
     </classes>
-  </test> <!-- Command line test 88b20d86-4d96-4bad-a020-be6476f12a1a -->
-  <test name="Command line test 88b20d86-4d96-4bad-a020-be6476f12a1a(failed)">
+  </test> <!-- Command line test 40ab8da7-c38a-4ab2-af1a-453e519b71fc -->
+  <test name="Command line test 40ab8da7-c38a-4ab2-af1a-453e519b71fc(failed)">
     <classes>
       <class name="com.HReckAutomation.HReck.forgotPassword">
         <methods>
@@ -19,5 +19,5 @@
         </methods>
       </class> <!-- com.HReckAutomation.HReck.forgotPassword -->
     </classes>
-  </test> <!-- Command line test 88b20d86-4d96-4bad-a020-be6476f12a1a(failed) -->
+  </test> <!-- Command line test 40ab8da7-c38a-4ab2-af1a-453e519b71fc(failed) -->
 </suite> <!-- Failed suite [MyDefault Test Suite] -->
