@@ -4,6 +4,7 @@ import java.awt.AWTException;
 import java.awt.Robot;
 import java.awt.event.KeyEvent;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 
@@ -12,7 +13,9 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
 
 import com.HReckAutomation.CommonUtils.CommonUtilities;
@@ -28,13 +31,13 @@ public class forgotPassword extends TestClassUtil
 	static String matchFor = "Password:";
 	static String myPass = "";
 
-	@BeforeClass()
+	@BeforeSuite()
 	public void openBrowser() throws IOException, AutomationFrameworkException {
 		CommonUtilities.openBrowser(true);
 		CommonUtilities.driver.manage().deleteAllCookies();
 	}
-	
-	@AfterClass
+
+	@AfterSuite()
 	public void closeBrowser() throws IOException, AutomationFrameworkException {
 		CommonUtilities.openBrowser(false);
 	}
@@ -73,24 +76,31 @@ public class forgotPassword extends TestClassUtil
 			robot.keyPress(KeyEvent.VK_T);
 			robot.keyRelease(KeyEvent.VK_CONTROL);
 			// robot.keyRelease(KeyEvent.VK_T);
-			Thread.sleep(5000);
+			ArrayList<String> tabs2 = new ArrayList<String>(CommonUtilities.driver.getWindowHandles());
+			CommonUtilities.driver.switchTo().window(tabs2.get(1));
+			System.out.println("next tab");
+			// CommonUtilities.driver.navigate().to("https://mail.google.com/");
+			// Thread.sleep(5000);
 			CommonUtilities.driver.get("https://mail.google.com/");
+			System.out.println("sent URL");
 			Thread.sleep(2000);
+			CommonUtilities.driver.findElement(KeyWordTool.getLocator("forgotPasswordMain", "signIn")).click();
 			CommonUtilities.driver.findElement(KeyWordTool.getLocator("forgotPasswordMain", "gmailUsername"))
 					.sendKeys("upavptechease@gmail.com");
 			CommonUtilities.driver.findElement(KeyWordTool.getLocator("forgotPasswordMain", "gmailusernameNext"))
 					.click();
-			Thread.sleep(5000);
+			Thread.sleep(2000);
 			CommonUtilities.driver.findElement(KeyWordTool.getLocator("forgotPasswordMain", "gmailPassword"))
 					.sendKeys("Tes@1234");
-			Thread.sleep(5000);
+			Thread.sleep(2000);
 			CommonUtilities.driver.findElement(KeyWordTool.getLocator("forgotPasswordMain", "gmailpasswordNext"))
 					.click();
-			Thread.sleep(3000);
+			Thread.sleep(2000);
+			System.out.println("In the Inbox");
 			List<WebElement> x = CommonUtilities.driver
 					.findElements(KeyWordTool.getLocator("forgotPasswordMain", "inbox"));
-
-			Thread.sleep(5000);
+			System.out.println("clicked Inbox");
+			Thread.sleep(2000);
 			System.out.println(x.size());
 			for (int i = 0; i < x.size(); i++) {
 				System.out.println(x.get(i).getText());
@@ -111,9 +121,10 @@ public class forgotPassword extends TestClassUtil
 							if (abc[j].equals(matchFor)) {
 								myPass = abc[j + 1];
 								System.out.println(myPass);
-
-
-								CommonUtilities.driver.findElement(By.cssSelector("body")).sendKeys(Keys.CONTROL + "w");
+								// CommonUtilities.driver.findElement(By.cssSelector("body")).sendKeys(Keys.CONTROL
+								// + "w");
+								CommonUtilities.driver.switchTo().window(tabs2.get(0));
+								CommonUtilities.driver.close();
 								System.out.println("Email tab closed");
 								Thread.sleep(5000);
 								CommonUtilities.driver.findElement(By.linkText("Go To Login Page")).click();
@@ -129,8 +140,8 @@ public class forgotPassword extends TestClassUtil
 										.findElement(KeyWordTool.getLocator("forgotPasswordMain", "LogInButton"))
 										.click();
 								Thread.sleep(2000);
-								String actual=CommonUtilities.driver.getCurrentUrl();
-								String expected="http://hreck.techeasesystems.in/#/change-password";
+								String actual = CommonUtilities.driver.getCurrentUrl();
+								String expected = "http://hreck.techeasesystems.in/#/change-password";
 								Assert.assertEquals(actual, expected);
 							}
 						}

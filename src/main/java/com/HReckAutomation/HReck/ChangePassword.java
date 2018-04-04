@@ -15,7 +15,9 @@ import org.testng.Assert;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
+import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
 
 import com.HReckAutomation.CommonUtils.CommonUtilities;
@@ -34,7 +36,7 @@ public class ChangePassword extends TestClassUtil {
 	 */
 
 
-	@BeforeClass
+	@BeforeSuite
 	public void openBrowser() throws IOException, AutomationFrameworkException, InterruptedException {
 		CommonUtilities.AccessToHReckURL(true);
 	}
@@ -43,9 +45,11 @@ public class ChangePassword extends TestClassUtil {
 	 * After class will quit browser once all test cases executed in the same class
 	 * 
 	 */
-	@AfterClass
+	@AfterSuite
 	public void quitBrowser() throws IOException, AutomationFrameworkException, InterruptedException {
 		CommonUtilities.AccessToHReckURL(false);
+		SendMail.mail();
+		
 	}
 	@Test(priority = 1, dataProvider = "defaultDP")
 	public void changePassword() throws AutomationFrameworkException, IOException, InterruptedException {
@@ -185,7 +189,7 @@ public class ChangePassword extends TestClassUtil {
 	@AfterMethod()
 	public void takeScreenShotOnFailure(ITestResult testResult) throws IOException {
 		if (testResult.getStatus() == ITestResult.FAILURE) {
-			SendMail.mail();
+//			SendMail.mail();
 			TakeScteenshot.getscreenshot( "ChangePassHreck" + System.currentTimeMillis());
 		}
 	}

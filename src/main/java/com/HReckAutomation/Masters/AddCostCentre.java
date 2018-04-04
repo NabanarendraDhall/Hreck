@@ -20,15 +20,15 @@ import com.mentorstudies.automationframework.util.common.KeyWordTool;
 
 public class AddCostCentre extends TestClassUtil{
 
-	@BeforeClass
-	public void openBrowser() throws IOException, AutomationFrameworkException, InterruptedException {
-		CommonUtilities.AccessToHReckURL(true);
-	}
-	
-	@AfterClass
-	public void closeBrowser() throws IOException, AutomationFrameworkException, InterruptedException {
-		CommonUtilities.AccessToHReckURL(false);
-	}
+//	@BeforeClass
+//	public void openBrowser() throws IOException, AutomationFrameworkException, InterruptedException {
+//		CommonUtilities.AccessToHReckURL(true);
+//	}
+//	
+//	@AfterClass
+//	public void closeBrowser() throws IOException, AutomationFrameworkException, InterruptedException {
+//		CommonUtilities.AccessToHReckURL(false);
+//	}
 	@Test(priority=0,dataProvider="defaultDP")
 	public void goToCostCentre() throws AutomationFrameworkException, InterruptedException {
 		
@@ -39,7 +39,7 @@ public class AddCostCentre extends TestClassUtil{
         CommonUtilities.driver.findElement(KeyWordTool.getLocator("goToCostCentre", "addCostCentre")).click();
         Thread.sleep(1000);
         String actualUrl=CommonUtilities.driver.getCurrentUrl();
-        String Expected= "http://hreck.techeasesystems.in/#/cost-centre-master"+"abc";
+        String Expected= "http://hreck.techeasesystems.in/#/cost-centre-master";
         Assert.assertEquals(actualUrl, Expected);
 	}
 	
