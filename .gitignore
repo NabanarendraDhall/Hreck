@@ -1,8 +1,8 @@
 target
-D:\WorkSpace_Naba\HReck\input\TestCases.xlsx
-D:\WorkSpace_Naba\HReck\
+D:/WorkSpace_Naba/HReck/input/TestCases.xlsx
+D:/WorkSpace_Naba/HReck/
 output
-D:\WorkSpace_Naba\HReck\test-output
-\input\TestCases.xlsx
-\output
-\test-output
+D:/WorkSpace_Naba/HReck/test-output
+/input/TestCases.xlsx
+/output
+/test-output
