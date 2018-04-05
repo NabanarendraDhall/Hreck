@@ -1,0 +1,9 @@
+com\HReckAutomation\HReck\HReckLogin.class
+com\HReckAutomation\CommonUtils\CommonUtilities.class
+com\HReckAutomation\Masters\AddCostCentre.class
+com\HReckAutomation\CommonUtils\SendMail$1.class
+com\HReckAutomation\HReck\forgotPassword.class
+com\HReckAutomation\HReck\ChangePassword.class
+com\HReckAutomation\CommonUtils\SendMail.class
+com\HReckAutomation\Masters\AddSupplier.class
+com\HReckAutomation\CommonUtils\TakeScteenshot.class
