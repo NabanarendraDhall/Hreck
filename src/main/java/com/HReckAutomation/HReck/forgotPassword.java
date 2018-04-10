@@ -31,16 +31,16 @@ public class forgotPassword extends TestClassUtil
 	static String matchFor = "Password:";
 	static String myPass = "";
 
-	@BeforeSuite()
-	public void openBrowser() throws IOException, AutomationFrameworkException {
-		CommonUtilities.openBrowser(true);
-		CommonUtilities.driver.manage().deleteAllCookies();
-	}
-
-	@AfterSuite()
-	public void closeBrowser() throws IOException, AutomationFrameworkException {
-		CommonUtilities.openBrowser(false);
-	}
+//	@BeforeSuite()
+//	public void openBrowser() throws IOException, AutomationFrameworkException {
+//		CommonUtilities.openBrowser(true);
+//		CommonUtilities.driver.manage().deleteAllCookies();
+//	}
+//
+//	@AfterSuite()
+//	public void closeBrowser() throws IOException, AutomationFrameworkException {
+//		CommonUtilities.openBrowser(false);
+//	}
 
 	@Test(priority = 0, dataProvider = "defaultDP")
 	public void forgotPasswordMain(String p, String q)
@@ -97,6 +97,7 @@ public class forgotPassword extends TestClassUtil
 					.click();
 			Thread.sleep(2000);
 			System.out.println("In the Inbox");
+			CommonUtilities.driver.navigate().refresh();
 			List<WebElement> x = CommonUtilities.driver
 					.findElements(KeyWordTool.getLocator("forgotPasswordMain", "inbox"));
 			System.out.println("clicked Inbox");
@@ -149,6 +150,5 @@ public class forgotPassword extends TestClassUtil
 				}
 			}
 		}
-
 	}
 }

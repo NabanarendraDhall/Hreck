@@ -21,16 +21,16 @@ import com.mentorstudies.automationframework.util.common.KeyWordTool;
 public class AddSupplier extends TestClassUtil
 {
 	
-		@BeforeClass
-		public void openBrowser() throws IOException, AutomationFrameworkException, InterruptedException 
-		{
-			CommonUtilities.AccessToHReckURL(true);
-		}
-		
-		@AfterClass
-		public void closeBrowser() throws IOException, AutomationFrameworkException, InterruptedException {
-			CommonUtilities.AccessToHReckURL(false);
-		}
+//		@BeforeClass
+//		public void openBrowser() throws IOException, AutomationFrameworkException, InterruptedException 
+//		{
+//			CommonUtilities.AccessToHReckURL(true);
+//		}
+//		
+//		@AfterClass
+//		public void closeBrowser() throws IOException, AutomationFrameworkException, InterruptedException {
+//			CommonUtilities.AccessToHReckURL(false);
+//		}
 		@Test(priority=0,dataProvider="defaultDP")
 		public void gotoSupplier() throws AutomationFrameworkException, InterruptedException 
 		{
