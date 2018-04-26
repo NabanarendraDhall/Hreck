@@ -36,7 +36,8 @@ public class CommonUtilities {
 			driver.get(CommonUtilities.URL);
 			driver.manage().window().maximize();
 		} else {
-			System.out.println("Browser not opened");
+			System.out.println("Browser Quit");
+			driver.quit();
 		}
 	}
 
