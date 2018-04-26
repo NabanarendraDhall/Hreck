@@ -1,24 +1,22 @@
 package com.HReckAutomation.HReck;
-
+/*
+ * Author : Nabanarendra Dhall
+ */
 import java.awt.AWTException;
-import java.awt.Robot;
-import java.awt.event.KeyEvent;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Set;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebElement;
 import org.testng.Assert;
+import org.testng.ITestResult;
 import org.testng.annotations.AfterClass;
-import org.testng.annotations.AfterSuite;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
 
 import com.HReckAutomation.CommonUtils.CommonUtilities;
+import com.HReckAutomation.CommonUtils.SendMail;
+import com.HReckAutomation.CommonUtils.TakeScteenshot;
 import com.mentorstudies.automationframework.common.TestClassUtil;
 import com.mentorstudies.automationframework.exception.AutomationFrameworkException;
 import com.mentorstudies.automationframework.util.common.KeyWordTool;
@@ -30,21 +28,28 @@ public class forgotPassword extends TestClassUtil
 	static String mailContent = "";
 	static String matchFor = "Password:";
 	static String myPass = "";
-
-//	@BeforeSuite()
-//	public void openBrowser() throws IOException, AutomationFrameworkException {
-//		CommonUtilities.openBrowser(true);
-//		CommonUtilities.driver.manage().deleteAllCookies();
-//	}
-//
-//	@AfterSuite()
-//	public void closeBrowser() throws IOException, AutomationFrameworkException {
-//		CommonUtilities.openBrowser(false);
-//	}
-
+/*
+ * This method will open browser and will navigate to the home page as before the test open
+ */
+	@BeforeClass()
+	public void openBrowser() throws IOException, AutomationFrameworkException {
+		CommonUtilities.openBrowser(true);
+		CommonUtilities.driver.manage().deleteAllCookies();
+	}
+/*
+ * This method will close browser and will execute after the test cases in the class over.
+ */
+	@AfterClass()
+	public void closeBrowser() throws IOException, AutomationFrameworkException {
+		CommonUtilities.openBrowser(false);
+	}
+/*
+ * The below test case will check all possible conditions for forgot password. 
+ */
 	@Test(priority = 0, dataProvider = "defaultDP")
 	public void forgotPasswordMain(String p, String q)
 			throws AutomationFrameworkException, IOException, InterruptedException, AWTException {
+		CommonUtilities.driver.get(CommonUtilities.URL);
 		String currentUrl = CommonUtilities.driver.getCurrentUrl();
 		Thread.sleep(2000);
 		CommonUtilities.driver.findElement(By.xpath("//a[@href=\'#/forgotpassword\']")).click();
@@ -66,89 +71,44 @@ public class forgotPassword extends TestClassUtil
 					.findElement(KeyWordTool.getLocator("forgotPasswordMain", "popUpErrorMessage")).getText();
 			System.out.println(ErrorMessage);
 			CommonUtilities.driver.findElement(KeyWordTool.getLocator("forgotPasswordMain", "PopUpOkButton")).click();
-			CommonUtilities.driver.navigate().refresh();
 			Assert.assertEquals(ErrorMessage, q, "Test case passed");
 			Thread.sleep(2000);
-			if (ErrorMessage.equals("New password is generated and email is sent to registered email address."))
-				;
-			Robot robot = new Robot();
-			robot.keyPress(KeyEvent.VK_CONTROL);
-			robot.keyPress(KeyEvent.VK_T);
-			robot.keyRelease(KeyEvent.VK_CONTROL);
-			// robot.keyRelease(KeyEvent.VK_T);
-			ArrayList<String> tabs2 = new ArrayList<String>(CommonUtilities.driver.getWindowHandles());
-			CommonUtilities.driver.switchTo().window(tabs2.get(1));
-			System.out.println("next tab");
-			// CommonUtilities.driver.navigate().to("https://mail.google.com/");
-			// Thread.sleep(5000);
-			CommonUtilities.driver.get("https://mail.google.com/");
-			System.out.println("sent URL");
-			Thread.sleep(2000);
-			CommonUtilities.driver.findElement(KeyWordTool.getLocator("forgotPasswordMain", "signIn")).click();
-			CommonUtilities.driver.findElement(KeyWordTool.getLocator("forgotPasswordMain", "gmailUsername"))
-					.sendKeys("upavptechease@gmail.com");
-			CommonUtilities.driver.findElement(KeyWordTool.getLocator("forgotPasswordMain", "gmailusernameNext"))
-					.click();
-			Thread.sleep(2000);
-			CommonUtilities.driver.findElement(KeyWordTool.getLocator("forgotPasswordMain", "gmailPassword"))
-					.sendKeys("Tes@1234");
-			Thread.sleep(2000);
-			CommonUtilities.driver.findElement(KeyWordTool.getLocator("forgotPasswordMain", "gmailpasswordNext"))
-					.click();
-			Thread.sleep(2000);
-			System.out.println("In the Inbox");
-			CommonUtilities.driver.navigate().refresh();
-			List<WebElement> x = CommonUtilities.driver
-					.findElements(KeyWordTool.getLocator("forgotPasswordMain", "inbox"));
-			System.out.println("clicked Inbox");
-			Thread.sleep(2000);
-			System.out.println(x.size());
-			for (int i = 0; i < x.size(); i++) {
-				System.out.println(x.get(i).getText());
-
-				if (x.get(i).getText().equals("HRECK")) {
-					x.get(i).click();
-
-					CommonUtilities.driver.navigate().refresh();
-					Thread.sleep(3000);
-
-					for (WebElement links : CommonUtilities.driver.findElements(By.tagName("p"))) {
-						mailContent = links.getText();
-						Thread.sleep(1000);
-						System.out.println(mailContent);
-						String abc[] = mailContent.split(" ");
-						Thread.sleep(1000);
-						for (int j = 0; j < abc.length; j++) {
-							if (abc[j].equals(matchFor)) {
-								myPass = abc[j + 1];
-								System.out.println(myPass);
-								// CommonUtilities.driver.findElement(By.cssSelector("body")).sendKeys(Keys.CONTROL
-								// + "w");
-								CommonUtilities.driver.switchTo().window(tabs2.get(0));
-								CommonUtilities.driver.close();
-								System.out.println("Email tab closed");
-								Thread.sleep(5000);
-								CommonUtilities.driver.findElement(By.linkText("Go To Login Page")).click();
-								CommonUtilities.driver
-										.findElement(KeyWordTool.getLocator("forgotPasswordMain", "email"))
-										.sendKeys("Jagdish");
-								CommonUtilities.driver
-										.findElement(KeyWordTool.getLocator("forgotPasswordMain", "password"))
-										.sendKeys(myPass.trim());
-								System.out.println("Inserted password is : " + myPass.trim());
-								Thread.sleep(1000);
-								CommonUtilities.driver
-										.findElement(KeyWordTool.getLocator("forgotPasswordMain", "LogInButton"))
-										.click();
-								Thread.sleep(2000);
-								String actual = CommonUtilities.driver.getCurrentUrl();
-								String expected = "http://hreck.techeasesystems.in/#/change-password";
-								Assert.assertEquals(actual, expected);
+			/*
+			 * Checking for success case of forgot password
+			 */
+			if (ErrorMessage.equals("New password is generated and email is sent to registered email address.")) {
+				/*
+				 * gets the new password by reading Gmail in java.
+				 */
+				String mailContent = SendMail.readGmail("upavptechease@gmail.com", "Tes@1234", "Your ‘Shree Jayshar’ New Password");
+				int index = mailContent.indexOf("Password:");
+				String myPass = mailContent.substring(index + 10, index + 18);
+				System.out.println(myPass);
+				CommonUtilities.driver.findElement(By.linkText("Go To Login Page")).click();
+									CommonUtilities.driver
+											.findElement(KeyWordTool.getLocator("forgotPasswordMain", "email"))
+											.sendKeys("Jagdish");
+									CommonUtilities.driver
+											.findElement(KeyWordTool.getLocator("forgotPasswordMain", "password"))
+											.sendKeys(myPass.trim());
+									System.out.println("Inserted password is : " + myPass.trim());
+									Thread.sleep(1000);
+									CommonUtilities.driver
+											.findElement(KeyWordTool.getLocator("forgotPasswordMain", "LogInButton"))
+											.click();
+									Thread.sleep(2000);
+									String actual = CommonUtilities.driver.getCurrentUrl();
+									String expected = "http://hreck.techeasesystems.in/#/change-password";
+									Assert.assertEquals(actual, expected);
+								}
 							}
 						}
-					}
-				}
-			}
+	
+	@AfterMethod()
+	public void takeScreenShotOnFailure(ITestResult testResult) throws IOException {
+		if (testResult.getStatus() == ITestResult.FAILURE) {
+//			SendMail.mail();
+			TakeScteenshot.getscreenshot( "ForgotPassHreck" + System.currentTimeMillis());
 		}
 	}
 }

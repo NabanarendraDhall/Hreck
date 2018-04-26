@@ -11,6 +11,8 @@ import java.io.IOException;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterClass;
@@ -36,7 +38,7 @@ public class ChangePassword extends TestClassUtil {
 	 */
 
 
-	@BeforeSuite
+	@BeforeClass
 	public void openBrowser() throws IOException, AutomationFrameworkException, InterruptedException {
 		CommonUtilities.AccessToHReckURL(true);
 	}
@@ -45,9 +47,16 @@ public class ChangePassword extends TestClassUtil {
 	 * After class will quit browser once all test cases executed in the same class
 	 * 
 	 */
-	@AfterSuite
+	@AfterClass
 	public void quitBrowser() throws IOException, AutomationFrameworkException, InterruptedException {
 		CommonUtilities.AccessToHReckURL(false);
+	}
+	
+	@AfterSuite
+	public void endActions() throws InterruptedException {
+		Actions actionObject = new Actions(CommonUtilities.driver);
+		actionObject.keyDown(Keys.CONTROL).sendKeys(Keys.F5).keyUp(Keys.CONTROL).perform();
+		Thread.sleep(2000);
 		SendMail.mail();
 		
 	}

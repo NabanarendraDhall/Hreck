@@ -216,101 +216,6 @@ public class AddCostCentre extends TestClassUtil {
 			ErrorMessage = CommonUtilities.driver
 					.findElement(KeyWordTool.getLocator("costCentreSuccess", "popUpErrorMessage")).getText();
 			CommonUtilities.driver.findElement(KeyWordTool.getLocator("costCentreSuccess", "PopUpOkButton")).click();
-			// String handle = CommonUtilities.driver.getWindowHandle();
-			// CommonUtilities.driver.findElement(KeyWordTool.getLocator("costCentreSuccess",
-			// "costCentreSubmit")).click();
-			// Thread.sleep(2000);
-			// Set handles = CommonUtilities.driver.getWindowHandles();
-			// for (String handle1 : CommonUtilities.driver.getWindowHandles()) {
-			// CommonUtilities.driver.switchTo().window(handle1);
-			// Thread.sleep(2000);
-			// String ErrorMessage = CommonUtilities.driver
-			// .findElement(KeyWordTool.getLocator("costCentreSuccess",
-			// "popUpErrorMessage")).getText();
-			// CommonUtilities.driver.findElement(KeyWordTool.getLocator("costCentreSuccess",
-			// "PopUpOkButton")).click();
-			// ;
-			// if (ErrorMessage.equals(nameDuplicateMessage)) {
-			//
-			// CommonUtilities.driver.findElement(KeyWordTool.getLocator("costCentreSuccess",
-			// "costCentreName"))
-			// .clear();
-			// CommonUtilities.driver.findElement(KeyWordTool.getLocator("costCentreSuccess",
-			// "costCentreName"))
-			// .sendKeys(name + rand.nextInt());
-			// String handle5 = CommonUtilities.driver.getWindowHandle();
-			// CommonUtilities.driver.findElement(KeyWordTool.getLocator("costCentreSuccess",
-			// "costCentreSubmit"))
-			// .click();
-			// Thread.sleep(2000);
-			// Set handles5 = CommonUtilities.driver.getWindowHandles();
-			// for (String handle16 : CommonUtilities.driver.getWindowHandles()) {
-			// CommonUtilities.driver.switchTo().window(handle16);
-			// Thread.sleep(2000);
-			// String ErrorMessage2 = CommonUtilities.driver
-			// .findElement(KeyWordTool.getLocator("costCentreSuccess",
-			// "popUpErrorMessage")).getText();
-			// CommonUtilities.driver.findElement(KeyWordTool.getLocator("costCentreSuccess",
-			// "PopUpOkButton"))
-			// .click();
-			// if (ErrorMessage2.equals(codeDuplicateMessage)) {
-			// CommonUtilities.driver
-			// .findElement(KeyWordTool.getLocator("costCentreSuccess",
-			// "costCentreCode")).clear();
-			// CommonUtilities.driver
-			// .findElement(KeyWordTool.getLocator("costCentreSuccess", "costCentreCode"))
-			// .sendKeys(code + rand.nextInt());
-			// CommonUtilities.driver
-			// .findElement(KeyWordTool.getLocator("costCentreSuccess",
-			// "costCentreSubmit")).click();
-			// Thread.sleep(2000);
-			// CommonUtilities.driver.switchTo().window(handle16);
-			// Thread.sleep(2000);
-			// String ErrorMessage3 = CommonUtilities.driver
-			// .findElement(KeyWordTool.getLocator("costCentreSuccess",
-			// "popUpErrorMessage"))
-			// .getText();
-			// CommonUtilities.driver.findElement(KeyWordTool.getLocator("costCentreSuccess",
-			// "PopUpOkButton"))
-			// .click();
-			//
-			// } else {
-			// System.out.println("user created successfully");
-			// }
-			// // Assert.assertEquals(ErrorMessage1, nameDuplicateMessage, "Test case
-			// failed");
-			// }
-			// } else if (ErrorMessage.equals(codeDuplicateMessage)) {
-			// CommonUtilities.driver.findElement(KeyWordTool.getLocator("costCentreSuccess",
-			// "costCentreCode"))
-			// .clear();
-			// CommonUtilities.driver.findElement(KeyWordTool.getLocator("costCentreSuccess",
-			// "costCentreCode"))
-			// .sendKeys(code + rand.nextInt());
-			// /*
-			// * String handle4 = CommonUtilities.driver.getWindowHandle();
-			// * CommonUtilities.driver.findElement(KeyWordTool.getLocator(
-			// * "costCentreSuccess", "costCentreSubmit")) .click(); Thread.sleep(2000); Set
-			// * handles5 = CommonUtilities.driver.getWindowHandles(); for (String handle5 :
-			// * CommonUtilities.driver.getWindowHandles()) {
-			// * CommonUtilities.driver.switchTo().window(handle5); Thread.sleep(2000);
-			// String
-			// * ErrorMessage2 = CommonUtilities.driver
-			// * .findElement(KeyWordTool.getLocator("costCentreSuccess",
-			// * "popUpErrorMessage")).getText();
-			// * CommonUtilities.driver.findElement(KeyWordTool.getLocator(
-			// * "costCentreSuccess", "PopUpOkButton")) .click();
-			// * CommonUtilities.driver.navigate().refresh();
-			// * Assert.assertEquals(ErrorMessage2, codeDuplicateMessage, "Test case
-			// passed");
-			// * }
-			// */
-			//
-			// }
-			// // else {
-			// // Assert.assertEquals(ErrorMessage, successMessage, "Test case passed");
-			// // }
-			// }
 			do {
 
 				if (ErrorMessage.equals(nameDuplicateMessage)) {
@@ -353,15 +258,15 @@ public class AddCostCentre extends TestClassUtil {
 								.getText();
 						CommonUtilities.driver.findElement(KeyWordTool.getLocator("costCentreSuccess", "PopUpOkButton"))
 								.click();
-//						CommonUtilities.driver.findElement(KeyWordTool.getLocator("costCentreSuccess","costCentreSubmit")).click();
+						// CommonUtilities.driver.findElement(KeyWordTool.getLocator("costCentreSuccess","costCentreSubmit")).click();
 						Thread.sleep(2000);
-						System.out.println("Final EM: "+ErrorMessage);
+						System.out.println("Final EM: " + ErrorMessage);
 					}
 				}
 
 			} while (successMessage.equals(ErrorMessage));
 			System.out.println("Error123 message: " + ErrorMessage);
-			System.out.println(ErrorMessage+"|"+successMessage);
+			System.out.println(ErrorMessage + "|" + successMessage);
 			Assert.assertEquals(ErrorMessage, successMessage, "Test case passed");
 		}
 	}

@@ -110,7 +110,6 @@ public class HReckLogin extends TestClassUtil {
 	@AfterMethod()
 	public void takeScreenShotOnFailure(ITestResult testResult) throws IOException {
 		if (testResult.getStatus() == ITestResult.FAILURE) {
-			SendMail.mail();
 			TakeScteenshot.getscreenshot( "HReckLogin" + System.currentTimeMillis());
 		}
 	}
