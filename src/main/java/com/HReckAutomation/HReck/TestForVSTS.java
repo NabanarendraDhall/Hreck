@@ -20,7 +20,7 @@ public class TestForVSTS extends TestClassUtil {
 		System.out.println("Chrome Opened");
 		driver.manage().window().maximize();
 		Thread.sleep(1000);
-		System.out.println("Test case made only to pass");
+		System.out.println("Test case made to pass");
 		driver.quit();
 	}
 
